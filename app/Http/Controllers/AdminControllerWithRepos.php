@@ -30,7 +30,7 @@ class AdminControllerWithRepos extends Controller
           if(Hash::check($admin3, $admin1)){
 
               Session::put('username', $request->input('username'));
-              return redirect()->route('admin.adminindex');
+              return redirect()->route('admin.homepage');
           }else{
               return redirect()->action('AdminControllerWithRepos@ask')
                   ->with('msg', 'you entered the wrong password ');
@@ -44,7 +44,9 @@ class AdminControllerWithRepos extends Controller
         }
         return redirect()->action('AdminControllerWithRepos@ask');
     }
-
+    public function homepage(){
+        return view('eproject.admin.homepage');
+    }
 
 
     public function adminindex()

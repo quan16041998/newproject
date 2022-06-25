@@ -21,8 +21,11 @@
     <dt class="col-sm-3">Stylist</dt>
     <dd class="col-sm-9">{{ $stylist->name }}</dd>
   </div>
+    @php
+    $img = 'images/product/';
+    @endphp
   <div class="col-sm-6">
-    <img src="{{asset($product->urlimg)}}" width="500" height="600">
+    <img src="{{asset($img.$product->urlimg)}}" width="350" height="500">
   </div>
 
 </dl>
