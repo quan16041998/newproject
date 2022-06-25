@@ -169,8 +169,8 @@ class AdminControllerWithRepos extends Controller
             'introduce'=>$request->input('introduce'),
             'stylist'=>$request->input('stylist')
         ];
-        if($request->hasFile('img')){
-            $image = $request->file('img');
+        if($request->hasFile('image')){
+            $image = $request->file('image');
             $collection->urlimg = $image->getClientOriginalName();
             $image->move('images/collection', $image->getClientOriginalName());
 
@@ -207,8 +207,8 @@ class AdminControllerWithRepos extends Controller
             'introduce'=>$request->input('introduce'),
             'stylist'=>$request->input('stylist')
         ];
-        if($request->hasFile('img')){
-            $image = $request->file('img');
+        if($request->hasFile('image')){
+            $image = $request->file('image');
             $collection->urlimg = $image->getClientOriginalName();
             $image->move('images/collection', $image->getClientOriginalName());
 
@@ -304,8 +304,8 @@ class AdminControllerWithRepos extends Controller
             'urlimg' => $request->input('urlimg'),
         ];
 
-        if($request->hasFile('img')){
-            $image = $request->file('img');
+        if($request->hasFile('image')){
+            $image = $request->file('image');
             $stylist->urlimg = $image->getClientOriginalName();
             $image->move('images/stylist', $image->getClientOriginalName());
 
@@ -344,8 +344,8 @@ class AdminControllerWithRepos extends Controller
             'history' => $request->input('history'),
             'urlimg' => $request->input('urlimg'),
         ];
-        if($request->hasFile('img')){
-            $image = $request->file('img');
+        if($request->hasFile('image')){
+            $image = $request->file('image');
             $stylist->urlimg = $image->getClientOriginalName();
             $image->move('images/stylist', $image->getClientOriginalName());
 
@@ -469,8 +469,8 @@ class AdminControllerWithRepos extends Controller
             'CollectionID' => $request->input('CollectionID'),
             'SID' => $request->input('SID'),
         ];
-        if($request->hasFile('img')){
-            $image = $request->file('img');
+        if($request->hasFile('image')){
+            $image = $request->file('image');
             $product->urlimg = $image->getClientOriginalName();
             $image->move('images/product', $image->getClientOriginalName());
 
@@ -518,8 +518,8 @@ class AdminControllerWithRepos extends Controller
             'CollectionID' => $request->input('collection'),
             'SID' => $request->input('stylist')
         ];
-        if($request->hasFile('img')){
-            $image = $request->file('img');
+        if($request->hasFile('image')){
+            $image = $request->file('image');
             $product->urlimg = $image->getClientOriginalName();
             $storedPath = $image->move('images/product', $image->getClientOriginalName());
 
