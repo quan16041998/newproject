@@ -6,7 +6,7 @@
 
     @include('partials.ErrorsAll')
 
-    <form action="{{route('admin.updatestylist', ['id' => old('id')?? $stylist->SID])}}" method="post">
+    <form action="{{route('admin.updatestylist', ['id' => old('id')?? $stylist->SID])}}" method="post" enctype="multipart/form-data">
       @csrf
       @include('eproject.stylist.StylistField')
 

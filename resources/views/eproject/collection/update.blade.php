@@ -3,7 +3,7 @@
     <div class="container">
       <h1 class="display-4">Update An Existing Collection</h1>
       @include('partials.ErrorsAll')
-      <form action="{{route('admin.updatecollection',['id'=> old('id')?? $collection->CollectionID])}}" method="post">
+      <form action="{{route('admin.updatecollection',['id'=> old('id')?? $collection->CollectionID])}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="card-body">
           <div class="card mb-4">
@@ -27,7 +27,7 @@
                   <tr>
                     <th><label for="urlimg">Url Img</label></th>
                     <th><input type="text" class="form-control" name="urlimg" id="urlimg"
-                               value="{{old('urlimg')?? $collection->urlimg}}"></th>
+                               value="{{old('urlimg')?? $collection->urlimg}}"><input type="file" name="image"></th>
                   </tr>
                   </thead>
                 </table>

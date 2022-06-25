@@ -30,7 +30,8 @@
           <tr>
             <th><label for="title" class="font-weight-bold">Url for image</label></th>
             <th><input type="text" class="form-control" id="urlimg" name="urlimg"
-                       value="{{old('urlimg')?? $product->urlimg?? null}}"></th>
+                       value="{{old('urlimg')?? $product->urlimg?? null}}"><input type="file" name="image"></th>
+
           </tr>
           @php
             $sid = old('stylist') ??  $product->SID ??  null;

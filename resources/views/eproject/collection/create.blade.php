@@ -3,7 +3,7 @@
   <div class="container">
     <h1 class="display-4">Create New Collection</h1>
     @include('partials.ErrorsAll')
-    <form action="{{route('admin.storecollection')}}" method="post">
+    <form action="{{route('admin.storecollection')}}" method="post" enctype="multipart/form-data">
       @csrf
       <div class="card-body">
         <div class="card mb-4">
@@ -20,7 +20,7 @@
                 </tr>
                 <tr>
                   <th><label for="urlimg">URL Img</label></th>
-                  <th><input class="form-control" name="urlimg" id="urlimg" type="text" value="{{old('urlimg')}}"></th>
+                  <th><input class="form-control" name="urlimg" id="urlimg" type="text" value="{{old('urlimg')}}"><input type="file" name="image"></th>
                 </tr>
                 <tr>
                   <th><label for="introduce">Introduce</label></th>
