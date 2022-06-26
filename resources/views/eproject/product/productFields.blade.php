@@ -23,11 +23,6 @@
                        value="{{old('price')?? $product->price?? null}}"></th>
           </tr>
           <tr>
-            <th><label for="title" class="font-weight-bold">Size</label></th>
-            <th><input type="text" class="form-control" id="size" name="size"
-                       value="{{old('size')?? $product->size?? null}}"></th>
-          </tr>
-          <tr>
             <th><label for="title" class="font-weight-bold">Url for image</label></th>
             <th><input type="text" class="form-control" id="urlimg" name="urlimg"
                        value="{{old('urlimg')?? $product->urlimg?? null}}"><input type="file" name="image"></th>
