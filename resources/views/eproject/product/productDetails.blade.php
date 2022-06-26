@@ -8,12 +8,14 @@
 
     <dt class="col-sm-3">Fabric</dt>
     <dd class="col-sm-9">{{ $product->fabric }}</dd>
-
+    @php
+        $price = number_format($product->price);
+    @endphp
     <dt class="col-sm-3">Price</dt>
-    <dd class="col-sm-9">{{ $product->price }}</dd>
+    <dd class="col-sm-9">{{$price }}$</dd>
 
     <dt class="col-sm-3">Size</dt>
-    <dd class="col-sm-9">{{ $product->size }}</dd>
+    <dd class="col-sm-9">{{  $product->size }}</dd>
 
     <dt class="col-sm-3">Collection</dt>
     <dd class="col-sm-9">{{ $collection->name}}</dd>
@@ -25,7 +27,7 @@
     $img = 'images/product/';
     @endphp
   <div class="col-sm-6">
-    <img src="{{asset($img.$product->urlimg)}}" width="350" height="500">
+    <img src="{{asset($img.$product->urlimg)}}" width="350" height="400">
   </div>
 
 </dl>

@@ -14,7 +14,7 @@
             <thead>
             <tr>
               <th data-sortable="" style="width: 28.9432%;"><a>Product Code</a></th>
-              <th data-sortable="" style="width: 15.5337%;">Price</th>
+              <th data-sortable="" style="width: 15.5337%;">Price(USD)</th>
               <th data-sortable="" style="width: 9.16091%;"><a type="button" class="btn btn-outline-info"
                                                                href="{{route('admin.createproduct')}}">New Product</a></th>
               <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
@@ -23,9 +23,12 @@
             </thead>
             <tbody>
             @foreach($product as $p)
+                @php
+                    $price = number_format($p->price);
+                @endphp
               <tr>
                 <td>{{$p->product_code}}</td>
-                <td>{{$p->price}}</td>
+                <td>{{$price}}</td>
                 <td><a type="button" class="btn btn-info btn-sm"
                        href="{{route('admin.showproduct', ['id' => $p->CID])}}"
                   >Show</a> </td>
