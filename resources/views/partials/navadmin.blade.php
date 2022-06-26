@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-dark bg-primary " style="margin-bottom:3rem">
   <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="{{route('admin.homepage')}}">
           <img src="{{asset('images/logo/download.jpg')}}" alt="Logo" style="width:40px;">
       </a>
     <ul class="navbar-nav mr-auto">

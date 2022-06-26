@@ -24,7 +24,7 @@ class AdminControllerWithRepos extends Controller
         $admin3 = $request->input('password');
         if(!$admin){
             return redirect()->action('AdminControllerWithRepos@ask')
-                ->with('msg', 'you entered the wrong username ');
+                ->with('msg', 'Your username is incorrect ');
         }else{
             $admin1 = $admin[0]->password;
           if(Hash::check($admin3, $admin1)){
@@ -33,7 +33,7 @@ class AdminControllerWithRepos extends Controller
               return redirect()->route('admin.homepage');
           }else{
               return redirect()->action('AdminControllerWithRepos@ask')
-                  ->with('msg', 'you entered the wrong password ');
+                  ->with('msg', 'Your password is incorrect ');
           }
         }
 
