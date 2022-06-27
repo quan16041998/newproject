@@ -9,14 +9,14 @@
 
         <dt class="col-sm-3">Name</dt>
         <dd class="col-sm-9">{{ $collection->name }}</dd>
-
-        <dt class="col-sm-3">Stylist</dt>
-        <dd class="col-sm-9">{{ $collection->SID}}</dd>
         <dt class="col-sm-3">Introduce</dt>
         <dd class="col-sm-9">{{$collection->introduce }}</dd>
       </div>
+        @php
+        $img = 'images/collection/'
+        @endphp
       <div class="col-sm-6">
-        <img src="{{asset($collection->urlimg)}}" width="500" height="600">
+        <img src="{{asset($img.$collection->urlimg)}}" width="500" height="600">
       </div>
 
     </dl>

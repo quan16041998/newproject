@@ -14,8 +14,6 @@
           <dt class="col-sm-3">Introduce</dt>
           <dd class="col-sm-9">{{$collection->introduce }}</dd>
 
-          <dt class="col-sm-3">Stylist name</dt>
-          <dd class="col-sm-9">{{$collection->SID }}</dd>
         </div>
         <div class="col-sm-6">
           <img src="{{asset($collection->urlimg)}}" width="500" height="600">
