@@ -62,7 +62,7 @@
                                 @php
                                     $img1 = 'images/product/00001-burberry-fall-2022-menswear-credit-brand.webp';
                                     $img2 = 'images/product/00023-DOLCE-GABBANA-MENSWEAR-SPRING-21.webp';
-                                    $img3 = 'images/product/Richard Mille RM 57-03 Tourbillon Sapphire Dragon.jpg';
+                                    $img3 = 'images/product/anh12.jpg';
                                 @endphp
                                 <img src="{{asset($img2)}}" width="300" height="400">
                                 <h6>MD_QA01</h6>
@@ -96,7 +96,7 @@
                             </div>
                             <div class="card-body" >
                                 <img src="{{asset($img3)}}" width="300" height="300">
-                                <h6>PK_DH05</h6>
+                                <h6>PK_DH22</h6>
                             </div>
                             <div class="card-footer small text-muted">Updated yesterday at 21:03 PM</div>
                         </div>
