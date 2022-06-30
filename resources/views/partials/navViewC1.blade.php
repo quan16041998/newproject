@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="{{asset("css/style.default.css")}}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{{asset("css/custom.css")}}">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="{{asset('images/ViewC1/favicon.png')}}">
 </head>
 <body>
 <div class="page-holder">
@@ -38,26 +38,43 @@
                         <li class="nav-item">
                             <!-- Link--><a class="nav-link" href="{{route('viewC1.shop')}}">Shop</a>
                         </li>
-                        <li class="nav-item">
-                            <!-- Link--><a class="nav-link" href="{{route('viewC1.detail')}}">Product detail</a>
+                        <li class="nav-item dropdown"><a type="button" class="nav-link dropdown-toggle" id="pagesDropdown"
+                                                         href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collection</a>
+                            <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
+                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.index')}}">View All</a>
+                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.shop')}}">View Collection</a>
+                              </div>
+
                         </li>
                         <li class="nav-item dropdown"><a type="button" class="nav-link dropdown-toggle" id="pagesDropdown"
-                                                         href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                                         href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stylist</a>
                             <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
-                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.index')}}">Homepage</a>
-                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.shop')}}">Category</a>
-                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.detail')}}">Product detail</a>
-                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.cart')}}">Shopping cart</a>
-                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.checkout')}}">Checkout</a></div>
+                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.index')}}">View All</a>
+                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.shop')}}">View Stylist</a>
+                            </div>
+
                         </li>
+
                     </ul>
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="{{route('viewC1.cart')}}"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!"> <i class="far fa-heart me-1"></i><small class="text-gray fw-normal"> (0)</small></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Login</a></li>
+                            <li class="nav-item "><a class="nav-link" href="{{route('viewC1.cart')}}"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a></li>
+                            <li class="nav-item "><a class="nav-link" href="#!"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Login</a></li>
+
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 </div>
+<div class="row">
+    <div class="col-8">
+
+    </div>
+    <div class="col-4">
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Product Code" aria-label="Search">
+            <button class="btn btn-outline-dark my-2 my-sm-0 btn-sm" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+

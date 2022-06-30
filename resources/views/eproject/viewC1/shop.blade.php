@@ -149,209 +149,25 @@
                         <div class="row">
 
                             <!-- PRODUCT-->
+
+                            @foreach($product as $p)
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product text-center">
                                     <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-1.jpg" alt="..."></a>
+                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="" src="{{asset("images/product/".$p->urlimg)}}" width="200px" height="250px" alt="..."></a>
                                         <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
+                                            <ul class="mb-0 list-inline" style="padding-top: 1rem">
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
                                                 <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Kui Ye Chen’s AirPods</a></h6>
+                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">{{$p->product_code}}</a></h6>
                                     <p class="small text-muted">$250</p>
                                 </div>
                             </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-2.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Air Jordan 12 gym red</a></h6>
-                                    <p class="small text-muted">$300</p>
-                                </div>
-                            </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-primary">New</div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-3.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Cyan cotton t-shirt</a></h6>
-                                    <p class="small text-muted">$25</p>
-                                </div>
-                            </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-4.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Timex Unisex Originals</a></h6>
-                                    <p class="small text-muted">$351</p>
-                                </div>
-                            </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-info">Sale</div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-5.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Red digital smartwatch</a></h6>
-                                    <p class="small text-muted">$250</p>
-                                </div>
-                            </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-6.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Nike air max 95</a></h6>
-                                    <p class="small text-muted">$300</p>
-                                </div>
-                            </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-7.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Joemalone Women prefume</a></h6>
-                                    <p class="small text-muted">$25</p>
-                                </div>
-                            </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-8.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Apple Watch</a></h6>
-                                    <p class="small text-muted">$351</p>
-                                </div>
-                            </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-danger">Sold</div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-9.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Men silver Byron Watch</a></h6>
-                                    <p class="small text-muted">$351</p>
-                                </div>
-                            </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-primary">New</div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-10.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Ploaroid one step camera</a></h6>
-                                    <p class="small text-muted">$351</p>
-                                </div>
-                            </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-11.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Gray Nike running shoes</a></h6>
-                                    <p class="small text-muted">$351</p>
-                                </div>
-                            </div>
-                            <!-- PRODUCT-->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product text-center">
-                                    <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="img/product-12.jpg" alt="..."></a>
-                                        <div class="product-overlay">
-                                            <ul class="mb-0 list-inline">
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Black DSLR lense</a></h6>
-                                    <p class="small text-muted">$351</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <!-- PAGINATION-->
                         <nav aria-label="Page navigation example">

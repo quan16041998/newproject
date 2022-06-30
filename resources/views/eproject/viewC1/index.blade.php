@@ -45,7 +45,7 @@
 
     <!-- HERO SECTION-->
     <div class="container">
-        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url(public/images/ViewC1/hero-banner-alt.jpg)" src="{{asset('images/ViewC1/hero-banner-alt.jpg')}}">
+        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url({{asset("images/ViewC1/hero-banner-alt.jpg")}})" src="{{asset('images/ViewC1/hero-banner-alt.jpg')}}">
             <div class="container py-5">
                 <div class="row px-4 px-lg-5">
                     <div class="col-lg-6">
@@ -66,18 +66,18 @@
             </header>
             <div class="row">
                 <div class="col-md-4"><a class="category-item" href="{{route('viewC1.shop')}}">
-                        <img class="img-fluid" src="public/images/ViewC1/cat-img-1.jpg" alt=""/>
-                        <strong class="category-item-title">Ae bán cgi thì thêm vào</strong></a>
+                        <img class="img-fluid" src="{{asset("images/product/00001-DOLCE-GABBANA-MENSWEAR-SPRING-21.webp")}}" alt=""/>
+                        <strong class="category-item-title">Summer 2022</strong></a>
                 </div>
-                <div class="col-md-4"><a class="category-item mb-4" href="{{route('viewC1.shop')}}"><img class="img-fluid" src="public/images/ViewC1/product-7.jpg" alt=""/>
-                        <strong class="category-item-title">Nma e nghĩ nên thêm 1 món phụ kiện gì đấy ngoài đồng hồ</strong></a>
+                <div class="col-md-4"><a class="category-item mb-4" href="{{route('viewC1.shop')}}"><img class="img-fluid" src="{{asset('images/ViewC1/cat-img-2.jpg')}}" alt=""/>
+                        <strong class="category-item-title">SHOES</strong></a>
                     <br>
                     <a class="category-item" href="{{route('viewC1.shop')}}"><img class="img-fluid" src="{{asset('images/ViewC1/cat-img-3.jpg')}}" alt=""/>
-                        <strong class="category-item-title">Watches</strong></a>
+                        <strong class="category-item-title">Watch</strong></a>
                 </div>
                 <div class="col-md-4"><a class="category-item" href="{{route('viewC1.shop')}}">
-                        <img class="img-fluid" src="public/images/ViewC1/cat-img-4.jpg" alt=""/>
-                        <strong class="category-item-title">Perfume</strong></a>
+                        <img class="img-fluid" src="{{asset("images/product/00001-burberry-fall-2022-menswear-credit-brand.webp")}}" alt=""/>
+                        <strong class="category-item-title">Winter 2022</strong></a>
                 </div>
             </div>
         </section>
@@ -104,125 +104,6 @@
                             </div>
                         </div>
                         <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Test</a></h6>
-                        <p class="small text-muted">$250</p>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="product text-center">
-                        <div class="position-relative mb-3">
-                            <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img height="370px" width="336px" class="img-fluid w-100" src="{{asset('images/product/GMT-Master II Ice 116769TBR.jpg')}}" alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Cái đéo gì đấy tùy ae chọn</a></h6>
-                        <p class="small text-muted">$250</p>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="product text-center">
-                        <div class="position-relative mb-3">
-                            <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                                <img class="img-fluid w-100" src="{{asset('images/product/Pilot Type 20 Tourbillon.jpg')}}" alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Cái đéo gì đấy tùy ae chọn</a></h6>
-                        <p class="small text-muted">$250</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="product text-center">
-                        <div class="position-relative mb-3">
-                            <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="public/images/ViewC1/product-7.jpg" alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Cái đéo gì đấy tùy ae chọn</a></h6>
-                        <p class="small text-muted">$250</p>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="product text-center">
-                        <div class="position-relative mb-3">
-                            <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="public/images/ViewC1/product-7.jpg" alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Cái đéo gì đấy tùy ae chọn</a></h6>
-                        <p class="small text-muted">$250</p>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="product text-center">
-                        <div class="position-relative mb-3">
-                            <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="public/images/ViewC1/product-7.jpg" alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Cái đéo gì đấy tùy ae chọn</a></h6>
-                        <p class="small text-muted">$250</p>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="product text-center">
-                        <div class="position-relative mb-3">
-                            <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="public/images/ViewC1/product-7.jpg" alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Cái đéo gì đấy tùy ae chọn</a></h6>
-                        <p class="small text-muted">$250</p>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="product text-center">
-                        <div class="position-relative mb-3">
-                            <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="img-fluid w-100" src="public/images/ViewC1/product-7.jpg" alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Cái đéo gì đấy tùy ae chọn</a></h6>
                         <p class="small text-muted">$250</p>
                     </div>
                 </div>

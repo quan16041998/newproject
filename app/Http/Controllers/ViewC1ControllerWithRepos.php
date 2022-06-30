@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repository\AdminRepos;
 use Illuminate\Http\Request;
 
 class ViewC1ControllerWithRepos extends Controller
@@ -11,7 +12,10 @@ class ViewC1ControllerWithRepos extends Controller
     }
 
     public function shop(){
-        return view('eproject.viewC1.shop');
+        $product = AdminRepos::getAllProducts();
+        return view('eproject.viewC1.shop',[
+            'product' => $product
+        ]);
     }
 
     public function cart(){
