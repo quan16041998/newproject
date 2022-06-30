@@ -216,3 +216,33 @@ Route::group(['prefix'=>'admin', 'middleware' => ['admin.auth']], function (){
         'as' => 'admin.deleteproduct'
     ]);
 });
+
+
+Route::group(['prefix' => 'viewC1'], function (){
+    Route::get('', [
+        'uses' => 'ViewC1ControllerWithRepos@index',
+        'as' => 'viewC1.index'
+    ]);
+
+    Route::get('shop', [
+        'uses' => 'ViewC1ControllerWithRepos@shop',
+        'as' => 'viewC1.shop'
+    ]);
+
+    Route::get('detail', [
+        'uses' => 'ViewC1ControllerWithRepos@detail',
+        'as' => 'viewC1.detail'
+    ]);
+
+    Route::get('cart', [
+        'uses' => 'ViewC1ControllerWithRepos@cart',
+        'as' => 'viewC1.cart'
+    ]);
+
+    Route::get('checkout', [
+        'uses' => 'ViewC1ControllerWithRepos@checkout',
+        'as' => 'viewC1.checkout'
+    ]);
+
+
+});
