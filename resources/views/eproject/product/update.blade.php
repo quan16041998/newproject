@@ -9,7 +9,7 @@
       @csrf
       @include('eproject.product.productFields')
 
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" class="btn btn-dark">Submit</button>
       <a href="{{route('admin.productindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
     </form>
   </div>
