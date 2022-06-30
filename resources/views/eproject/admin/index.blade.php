@@ -26,7 +26,7 @@
             <tr>
               <td>{{$a->username}}</td>
               <td>{{$a->name}}</td>
-              <td><a type="button" class="btn btn-primary btn-sm"
+              <td><a type="button" class="btn btn-info btn-sm"
                      href="{{route('admin.showadmin', ['username' => $a->username])}}">
                   Show</a>
               </td>
