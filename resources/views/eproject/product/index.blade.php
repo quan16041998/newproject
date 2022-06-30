@@ -15,8 +15,7 @@
             <tr>
               <th data-sortable="" style="width: 28.9432%;"><a>Product Code</a></th>
               <th data-sortable="" style="width: 15.5337%;">Price(USD)</th>
-              <th data-sortable="" style="width: 9.16091%;"><a type="button" class="btn btn-outline-info"
-                                                               href="{{route('admin.createproduct')}}">New Product</a></th>
+              <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
               <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
               <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
             </tr>
