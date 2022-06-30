@@ -22,12 +22,17 @@
             <th><input type="text" class="form-control" id="price" name="price"
                        value="{{old('price')?? $product->price?? null}}"></th>
           </tr>
-            <th><input type="hidden" class="form-control" id="size" name="size"
-                       value="S-M-L"></th>
+          <tr>
+              <th><label for="title" class="font-weight-bold">Size</label></th>
+              <th><input type="number" class="form-control" id="size" name="size" min="0"
+                         value="{{old('size')?? $product->size?? null}}"></th>
+          </tr>
           <tr>
             <th><label for="title" class="font-weight-bold">Url for image</label></th>
             <th><input type="text" class="form-control" id="urlimg" name="urlimg"
-                       value="{{old('urlimg')?? $product->urlimg?? null}}"><input type="file" name="image"></th>
+                       value="{{old('urlimg')?? $product->urlimg?? null}}"><input type="file" name="image"><br>
+                <img src="{{asset($product->urlimg)}}" width="350" height="400">                
+           </th>
 
           </tr>
           @php
