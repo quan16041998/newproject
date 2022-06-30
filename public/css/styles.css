@@ -121,7 +121,6 @@ th {
     border-bottom-width: 1px;
     box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
-
 .table > thead, .dataTable-table > thead {
     vertical-align: bottom;
 }
@@ -130,6 +129,15 @@ th {
 }
 .table-bordered > :not(caption) > * > *, .dataTable-table > :not(caption) > * > * {
     border-width: 0 1px;
+}
+.table-bordered > :not(caption) > *, .dataTable-table > :not(caption) > * {
+    border-width: 1px 0;
+}
+.table-bordered > :not(caption) > * > *, .dataTable-table > :not(caption) > * > * {
+    border-width: 0 1px;
+}
+.table-borderless > :not(:first-child) {
+    border-top-width: 0;
 }
 .form-select, .dataTable-selector {
     display: block;
