@@ -33,12 +33,12 @@
                   </tr>
                   </thead>
                 </table>
-                <button type="submit" class="btn btn-success">Submit</button>
-                <a type="button" href="{{route('admin.collectionindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
               </div>
             </div>
           </div>
         </div>
       </form>
+      <button type="submit" class="btn btn-success">Submit</button>
+      <a type="button" href="{{route('admin.collectionindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
     </div>
 @endsection
