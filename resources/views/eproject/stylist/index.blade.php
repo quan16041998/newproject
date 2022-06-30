@@ -1,7 +1,6 @@
 @extends('masters.adminmaster')
 
 @section('main')
-<div class="container"><br>
   @include('partials.allmessage')
   <div class="card-body">
     <div class="card mb-4">
