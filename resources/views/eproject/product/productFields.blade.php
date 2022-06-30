@@ -52,7 +52,7 @@
           </tr>
           <tr>
             <th><label for="collection" class="font-weight-bold">Collection</label></th>
-            <th><select name="collection" class="form-control" id="collection" required>
+            <th><select name="collection" class="form-control" id="collection">
                 <option value="0">Please select a Collection :)</option>
                 @foreach($collection as $c)
                   <option value="{{ $c->CollectionID }}"
