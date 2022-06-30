@@ -27,7 +27,9 @@
                   <tr>
                     <th><label for="urlimg">Url Img</label></th>
                     <th><input type="text" class="form-control" name="urlimg" id="urlimg"
-                               value="{{old('urlimg')?? $collection->urlimg}}"><input type="file" name="image"></th>
+                               value="{{old('urlimg')?? $collection->urlimg}}"><input type="file" name="image"><br>
+                        <img src="{{asset($collection->urlimg)}}" width="350" height="400">
+                    </th>
                   </tr>
                   </thead>
                 </table>
