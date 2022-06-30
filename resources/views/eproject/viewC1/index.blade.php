@@ -7,7 +7,7 @@
                 <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body p-0">
                     <div class="row align-items-stretch">
-                        <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" style="background: url(public/images/product/00001-burberry-fall-2022-menswear-credit-brand.webp)" href="public/images/product/00001-burberry-fall-2022-menswear-credit-brand.webp" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="public/images/product/00001-burberry-fall-2022-menswear-credit-brand.webp" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="public/images/product/00001-burberry-fall-2022-menswear-credit-brand.webp" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
+                        <div class="col-lg-6 p-lg-0"><a class="lightbox product-view d-block h-100 bg-cover bg-center" style="background: url(public/images/product/00001-burberry-fall-2022-menswear-credit-brand.webp)" href="{{asset('images/product/00001-burberry-fall-2022-menswear-credit-brand.webp')}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="public/images/product/00001-burberry-fall-2022-menswear-credit-brand.webp" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="public/images/product/00001-burberry-fall-2022-menswear-credit-brand.webp" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
                         <div class="col-lg-6">
                             <div class="p-4 my-md-4">
                                 <ul class="list-inline mb-2">
@@ -99,7 +99,7 @@
                                 <ul class="mb-0 list-inline">
                                     <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
                                     <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
+                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -176,4 +176,11 @@
                 </section>
             </div>
 
+@endsection
+@section('script')
+    <script>
+        $('#productView').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
 @endsection

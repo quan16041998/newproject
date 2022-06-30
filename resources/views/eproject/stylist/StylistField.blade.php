@@ -34,7 +34,9 @@
           <tr>
             <th><label for="pages" class="font-weight-bold">urlimg</label></th>
             <th><input type="text" class="form-control" id="urlimg" name="urlimg"
-                       value="{{old('urlimg')?? $stylist->urlimg}}"><input type="file" name="image"></th>
+                       value="{{old('urlimg')?? $stylist->urlimg}}"><input type="file" name="image">
+                <img src="{{asset("images/stylist/".$stylist->urlimg)}}" width="280px" height="300px">
+            </th>
           </tr>
           </thead>
         </table>

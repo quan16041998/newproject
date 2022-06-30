@@ -54,9 +54,9 @@
           </div>
         </li>
 
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto" style="float: right">
 
-          <li class="nav-item mr-3">
+          <li class="nav-item mr-3" style="float: right">
             <a class="nav-link" href="#">
               <i class="bi bi-person"></i>
               {{\Illuminate\Support\Facades\Session::has('username')?
@@ -64,7 +64,7 @@
             </a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" style="float: right">
             <a class="nav-link" href="{{route('admin.signout')}}">
               <i class="bi bi-box-arrow-left"></i>
               Logout

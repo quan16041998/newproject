@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
                   <th><label for="title" class="font-weight-bold">Date of birth</label></th>
-                  <th><input type="text" class="form-control" id="dob" name="dob"
+                  <th><input type="date" class="form-control" id="dob" name="dob"
                              value="{{old('dob')?? $admin->dob}}">
                 </tr>
                 <tr>

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="{{asset('css/manager.css')}}">
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <meta name="robots" content="all,follow">
     <!-- gLightbox gallery-->
@@ -23,11 +22,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="public/css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="{{asset("css/style.default.css")}}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="public/css/custom.css">
+    <link rel="stylesheet" href="{{asset("css/custom.css")}}">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="public/images/ViewC1/favicon.png">
+    <link rel="shortcut icon" href="{{asset('images/ViewC1/favicon.png')}}">
     <title>Document</title>
 </head>
 <body>

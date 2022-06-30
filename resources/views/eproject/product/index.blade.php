@@ -26,7 +26,7 @@
                     $price = number_format($p->price);
                     $img = '/images/product/'
                 @endphp
-                <td data-toggle="tooltip"  data-placement="auto " data-html="true" title="<image width='300px' height='400px' src='{{asset($img.$p->urlimg)}}'/>">
+                <td data-toggle="tooltip"  data-placement="right" data-html="true" title="Images<image width='300px' height='400px' src='{{asset($img.$p->urlimg)}}'/>">
                     {{$p->product_code}}
                 </td>
                 <td>{{$p->price}}</td>

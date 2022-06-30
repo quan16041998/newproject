@@ -19,7 +19,7 @@ class AdminControllerWithRepos extends Controller
 
 
     public function signin(Request $request){
-        $this->formadminloginValidate($request)->validate   ();
+        $this->formadminloginValidate($request)->validate();
         $admin = AdminRepos::getadmin($request->input('username'));
 
         $admin3 = $request->input('password');

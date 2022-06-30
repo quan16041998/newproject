@@ -128,7 +128,7 @@
                     <div class="col-lg-9 order-1 order-lg-2 mb-5 mb-lg-0">
                         <div class="row mb-3 align-items-center">
                             <div class="col-lg-6 mb-2 mb-lg-0">
-                                <p class="text-sm text-muted mb-0">Showing 1–12 of 53 results</p>
+                                <p class="text-sm text-muted mb-0">Showing 1–12 of 120 results</p>
                             </div>
                             <div class="col-lg-6">
                                 <ul class="list-inline d-flex align-items-center justify-content-lg-end mb-0">
@@ -154,17 +154,17 @@
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product text-center">
                                     <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="" src="{{asset("images/product/".$p->urlimg)}}" width="200px" height="250px" alt="..."></a>
+                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="" src="{{asset("images/product/".$p->urlimg)}}" width="200px" height="270px" alt="..."></a>
                                         <div class="product-overlay">
                                             <ul class="mb-0 list-inline" style="padding-top: 1rem">
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
+                                                <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">{{$p->product_code}}</a></h6>
-                                    <p class="small text-muted">$250</p>
+                                    <p class="small text-muted">{{$p->price}}$</p>
                                 </div>
                             </div>
                             @endforeach
@@ -184,4 +184,11 @@
             </div>
         </section>
     </div>
+@endsection
+@section('script')
+    <script>
+        $('#productView').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
 @endsection
