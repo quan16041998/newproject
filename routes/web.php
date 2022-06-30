@@ -41,10 +41,7 @@ Route::group(['prefix'=>'auth'],function (){
 
 
 Route::group(['prefix'=>'admin', 'middleware' => ['admin.auth']], function (){
-    Route::get('homepage', [
-        'uses' => 'AdminControllerWithRepos@homepage',
-        'as' => 'admin.homepage'
-    ]);
+
     Route::get('admin', [
         'uses' => 'AdminControllerWithRepos@adminindex',
         'as' => 'admin.adminindex'
@@ -64,6 +61,7 @@ Route::group(['prefix'=>'admin', 'middleware' => ['admin.auth']], function (){
         'uses' => 'AdminControllerWithRepos@updateadmin',
         'as' => 'admin.updateadmin'
     ]);
+
 
 
 

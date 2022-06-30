@@ -19,21 +19,22 @@ class AdminControllerWithRepos extends Controller
 
 
     public function signin(Request $request){
+        $this->formadminloginValidate($request)->validate   ();
         $admin = AdminRepos::getadmin($request->input('username'));
 
         $admin3 = $request->input('password');
         if(!$admin){
             return redirect()->action('AdminControllerWithRepos@ask')
-                ->with('msg', 'Your username is incorrect ');
+                ->with('msgs', 'Your username is incorrect ');
         }else{
             $admin1 = $admin[0]->password;
           if(Hash::check($admin3, $admin1)){
 
               Session::put('username', $request->input('username'));
-              return redirect()->route('admin.homepage');
+              return redirect()->route('admin.adminindex');
           }else{
               return redirect()->action('AdminControllerWithRepos@ask')
-                  ->with('msg', 'Your password is incorrect ');
+                  ->with('msgs', 'Your password is incorrect ');
           }
         }
 
@@ -44,10 +45,18 @@ class AdminControllerWithRepos extends Controller
         }
         return redirect()->action('AdminControllerWithRepos@ask');
     }
-    public function homepage(){
-        return view('eproject.admin.homepage');
-    }
+    private function formadminloginValidate(Request $request){
+        return Validator::make(
+            $request->all(),
+            [
+                'username' => ['required'],
+                'password' => ['required']
 
+            ],
+            [
+                'username.required' => 'Username can not be empty',
+                'password.required' => 'Password can not be empty']);
+    }
 
     public function adminindex()
     {
@@ -79,23 +88,45 @@ class AdminControllerWithRepos extends Controller
     public function updateadmin(Request $request, $username)
     {
         if ($username != $request->input('username')) {
-            return redirect()->action('AdminControllerWithRepos@index');
+            return redirect()->action('AdminControllerWithRepos@adminindex');
         }
         $this->formadminValidate($request)->validate();
+        if($request->input('newpassword' != null)){
+            $admin = (object)[
+                'username' => $request->input('username'),
+                'password' => Hash::make($request->input('newpassword'), [
+                    'rounds' => 10,
+                ]),
+                'name' => $request->input('name'),
+                'dob' => $request->input('dob'),
+                'contact' => $request->input('contact'),
+                'email' => $request->input('email'),
+            ];
+        }else{
+            $admin = (object)[
+                'username' => $request->input('username'),
+                'password' => Hash::make($request->input('oldpassword'), [
+                    'rounds' => 10,
+                ]),
+                'name' => $request->input('name'),
+                'dob' => $request->input('dob'),
+                'contact' => $request->input('contact'),
+                'email' => $request->input('email'),
+            ];
+        }
 
-        $admin = (object)[
-            'username' => $request->input('username'),
-            'password' => $request->input('password'),
-            'name' => $request->input('name'),
-            'dob' => $request->input('dob'),
-            'contact' => $request->input('contact'),
-            'email' => $request->input('email'),
-        ];
+            $admin2 = AdminRepos::getadmin($request->input('username'));
+            $admin3 = $request->input('oldpassword');
+            $admin1 = $admin2[0]->password;
+            if(Hash::check($admin3, $admin1)){
 
-        AdminRepos::updateadmin($admin);
+                AdminRepos::updateadmin($admin);
+                return redirect()->action('AdminControllerWithRepos@adminindex')->with('msg','Update Successfully');
+            }else{
+                return redirect()->action('AdminControllerWithRepos@updateadmin')
+                    ->with('msgs', 'Your password is incorrect ');
+            }
 
-        return redirect()->action('AdminControllerWithRepos@index')
-            ->with('msg', 'Update Successfully');
     }
 
     private function formadminValidate(Request $request)
@@ -103,23 +134,20 @@ class AdminControllerWithRepos extends Controller
         return Validator::make(
             $request->all(),
             [
-                'username' => ['required', 'min:6'],
-                'password' => ['required', 'min:6'],
-                'name' => ['required', 'min:6'],
+                'username' => ['required'],
+                'name' => ['required'],
                 'dob' => ['required'],
                 'contact' => ['required'],
-                'email' => ['email']
+                'email' => ['email'],
+                'oldpassword' => ['required']
             ],
             [
                 'username.required' => 'Username can not be empty',
-                'password.required' => 'Password can not be empty',
+                'oldpassword.required' => 'Please enter old password',
                 'name.required' => 'Name can not be empty',
                 'dob.required' => 'Date of birth can not be empty',
                 'contact.required' => 'Contact can not be empty',
                 'email.required' => 'Email can not be empty',
-                'username.min' => 'Username must have at least 6 characters',
-                'password.min' => 'Password must have at least 6 characters',
-                'name.min' => 'name must have at least 6 characters'
             ]
         );
 
@@ -205,7 +233,6 @@ class AdminControllerWithRepos extends Controller
             'name'=>$request->input('name'),
             'urlimg'=>$request->input('urlimg'),
             'introduce'=>$request->input('introduce'),
-            'stylist'=>$request->input('stylist')
         ];
         if($request->hasFile('image')){
             $image = $request->file('image');

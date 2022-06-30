@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark " style="margin-bottom:3rem ">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark " style="margin-bottom:10rem ">
   <div class="container-fluid">
-      <a class="navbar-brand" href="{{route('admin.homepage')}}">
-          <img src="{{asset('images/download.jpg')}}" alt="Logo" style="width:40px;">
+      <a class="navbar-brand" href="{{route('admin.adminindex')}}">
+          <img src="{{asset('images/logo/download.jpg')}}" alt="Logo" style="width:40px;">
       </a>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">

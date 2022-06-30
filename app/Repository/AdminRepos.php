@@ -25,10 +25,10 @@ class AdminRepos
 
     public static function updateadmin($admin){
         $sql = 'update admin ';
-        $sql .= 'set name = ?, dob = ?, contact = ?, email = ? ';
+        $sql .= 'set password = ?, name = ? ,dob = ?, contact = ?, email = ? ';
         $sql .= 'where username = ? ';
 
-        DB::select($sql, [$admin->name, $admin->dob, $admin->contact, $admin->email, $admin->username]);
+        DB::select($sql, [$admin->password,$admin->name, $admin->dob, $admin->contact, $admin->email, $admin->username]);
     }
 
 

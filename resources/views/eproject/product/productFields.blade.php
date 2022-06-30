@@ -23,22 +23,24 @@
                        value="{{old('price')?? $product->price?? null}}"></th>
           </tr>
           <tr>
-              <th><label for="title" class="font-weight-bold">Size</label></th>
-              <th><input type="number" class="form-control" id="size" name="size" min="0"
-                         value="{{old('size')?? $product->size?? null}}"></th>
+              <th><label for="size" class="font-weight-bold">Size</label></th>
+              <th><input type="text" class="form-control" id="size" name="size"
+                         value="{{old('size')?? $product->size?? "S-M-L"}}"></th>
           </tr>
+          @php
+              $img = 'images/product/';
+             $sid = old('stylist') ??  $product->SID ??  null;
+             $cid = old('collection') ?? $product->CollectionID  ?? null;
+          @endphp
           <tr>
             <th><label for="title" class="font-weight-bold">Url for image</label></th>
             <th><input type="text" class="form-control" id="urlimg" name="urlimg"
                        value="{{old('urlimg')?? $product->urlimg?? null}}"><input type="file" name="image"><br>
-                <img src="{{asset($product->urlimg)}}" width="350" height="400">                
+                <img src="{{asset($img.$product->urlimg)}}" width="350" height="400">
            </th>
 
           </tr>
-          @php
-            $sid = old('stylist') ??  $product->SID ??  null;
-            $cid = old('collection') ?? $product->CollectionID  ?? null;
-          @endphp
+
           <tr>
             <th><label for="stylist" class="font-weight-bold">Stylist</label></th>
             <th><select name="stylist" class="form-control" id="stylist" required>

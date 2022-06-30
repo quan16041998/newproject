@@ -16,7 +16,7 @@
         $img = 'images/collection/'
         @endphp
       <div class="col-sm-6">
-        <img src="{{asset($img.$collection->urlimg)}}" width="500" height="600">
+        <img src="{{asset($img.$collection->urlimg)}}" width="350px" height="400px">
       </div>
 
     </dl>

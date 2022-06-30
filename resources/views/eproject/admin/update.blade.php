@@ -4,6 +4,7 @@
   <div class="container">
     <h1 class="display-4">Update An Existing Admin</h1>
     @include('partials.ErrorsAll')
+      @include('partials.sessionmessage')
     <form action="{{route('admin.updateadmin', ['username' => old('username')?? $admin->username])}}" method="post">
       @csrf
       <div class="card-body">
@@ -17,15 +18,15 @@
                 <thead>
                 <tr>
                   <th><label for="username" class="font-weight-bold">Username</label>
-                  <th><input type="text" name="username" value="{{old('username')?? $admin->username}}"></th>
+                  <th><input type="text" class="form-control" name="username" value="{{old('username')?? $admin->username}}"></th>
                 </tr>
                 <tr>
-                  <th><label for="title" class="font-weight-bold">Password</label></th>
-                  <th><input type="password" class="form-control" id="password" name="password"
-                             value="{{old('password')?? $admin->password}}"></th>
+                  <th><label for="newpassword" class="font-weight-bold">New Password</label></th>
+                  <th><input type="password" class="form-control" id="password" name="newpassword"
+                            ></th>
                 </tr>
                 <tr>
-                  <th><label for="title" class="font-weight-bold">Name</label></th>
+                  <th><label for="name" class="font-weight-bold">Name</label></th>
                   <th><input type="text" class="form-control" id="name" name="name"
                              value="{{old('name')?? $admin->name}}">
                 </tr>
@@ -44,14 +45,20 @@
                   <th><input type="text" class="form-control" id="email" name="email"
                              value="{{old('email')?? $admin->email}}">
                 </tr>
+                <tr>
+                    <th><label for="oldpassword" class="font-weight-bold">Please enter old password for update</label></th>
+                    <th><input type="password" class="form-control" id="oldpassword" name="oldpassword"
+                        ></th>
+                </tr>
                 </thead>
               </table>
             </div>
           </div>
         </div>
       </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+        <a type="button" href="{{route('admin.adminindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
     </form>
-    <button type="submit" class="btn btn-dark">Submit</button>
-    <a type="button" href="{{route('admin.adminindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
+
   </div>
 @endsection

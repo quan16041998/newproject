@@ -80,6 +80,7 @@
   </div>
 </nav>
 @include('partials.sessionmessage')
+@include('partials.ErrorsAll')
 <main class="login-form">
   <div class="cotainer">
     <div class="row justify-content-center">

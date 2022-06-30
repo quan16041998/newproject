@@ -37,8 +37,10 @@
             </div>
           </div>
         </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+          <a type="button" href="{{route('admin.collectionindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
       </form>
-      <button type="submit" class="btn btn-success">Submit</button>
-      <a type="button" href="{{route('admin.collectionindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
+
+
     </div>
 @endsection

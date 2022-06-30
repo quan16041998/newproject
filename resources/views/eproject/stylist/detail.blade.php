@@ -18,8 +18,9 @@
     <dt class="col-sm-3">history</dt>
     <dd class="col-sm-9">{{$stylist->history }}</dd>
   </div>
+
   <div class="col-sm-6">
-    <img src="{{asset($stylist->urlimg)}}" width="400" height="500">
+    <img src="{{asset("images/stylist/".$stylist->urlimg)}}" width="400" height="500">
   </div>
 
 
