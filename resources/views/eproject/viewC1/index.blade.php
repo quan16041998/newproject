@@ -113,42 +113,6 @@
                 <div class="product text-center">
                   <div class="position-relative mb-3">
                     <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/giay/giay07.webp')}}" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                        <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Dejounte Murray x New Balance Two WXY ‘Personal Journey’ BB2WXYOM</a></h6>
-                  <p class="small text-muted"></p>
-                </div>
-              </div>
-
-              <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="position-relative mb-3">
-                    <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/giay/giay10.webp')}}" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                        <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">New Balance Two WXY ‘My City Pack – San Antonio’</a></h6>
-                  <p class="small text-muted"></p>
-                </div>
-              </div>
-
-              <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="position-relative mb-3">
-                    <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
                       <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/giay/giay14.png')}}" alt="..."></a>
                     <div class="product-overlay">
                       <ul class="mb-0 list-inline">
@@ -159,24 +123,6 @@
                     </div>
                   </div>
                   <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Nike Air Jordan 1 Retro High Dior Like Auth</a></h6>
-                  <p class="small text-muted"></p>
-                </div>
-              </div>
-
-              <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="position-relative mb-3">
-                    <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/product/Pilot Type 20 Tourbillon.jpg')}}" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                        <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Pilot Type 20 Tourbillon</a></h6>
                   <p class="small text-muted"></p>
                 </div>
               </div>
@@ -203,7 +149,7 @@
                 <div class="product text-center">
                   <div class="position-relative mb-3">
                     <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/product/00039-DOLCE-GABBANA-MENSWEAR-SPRING-21.webp')}}" alt="..."></a>
+                      <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/product/TAKASHI MURAKAMI SAPPHIRE RAINBOW.png')}}" alt="..."></a>
                     <div class="product-overlay">
                       <ul class="mb-0 list-inline">
                         <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
@@ -212,25 +158,7 @@
                       </ul>
                     </div>
                   </div>
-                  <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">00039-DOLCE-GABBANA-MENSWEAR-SPRING</a></h6>
-                  <p class="small text-muted"></p>
-                </div>
-              </div>
-
-              <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="position-relative mb-3">
-                    <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/product/patek-6102p-001.png')}}" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                        <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">patek-6102p-001</a></h6>
+                  <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">TAKASHI MURAKAMI SAPPHIRE RAINBOW</a></h6>
                   <p class="small text-muted"></p>
                 </div>
               </div>
