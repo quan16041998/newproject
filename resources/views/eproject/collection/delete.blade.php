@@ -16,7 +16,7 @@
 
         </div>
         <div class="col-sm-6">
-          <img src="{{asset($collection->urlimg)}}" width="500" height="600">
+          <img src="{{asset($collection->urlimg)}}" width="350" height="400">
         </div>
       </dl>
 
