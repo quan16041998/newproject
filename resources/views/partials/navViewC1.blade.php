@@ -29,7 +29,7 @@
     <header class="header bg-white">
         <div class="container px-lg-3">
             <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="{{route('viewC1.index')}}"><span class="fw-bold text-uppercase text-dark">Boutique</span></a>
-                <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <button class="navbar-toggler navbar-toggler-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
@@ -57,10 +57,20 @@
 
                     </ul>
                     <ul class="navbar-nav ms-auto">
-                            <li class="nav-item "><a class="nav-link" href="{{route('viewC1.cart')}}"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a></li>
-                            <li class="nav-item "><a class="nav-link" href="#!"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Login</a></li>
-
+                        <li class="nav-item "><a class="nav-link" href="{{route('viewC1.cart')}}"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a></li>
+                        <li class="nav-item "><a class="nav-link" href="#!"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Login</a></li>
                     </ul>
+{{--                    <div class="col-lg-2 input-group-sm">--}}
+{{--                        <form class="form-inline row">--}}
+{{--                            <input class="form-control-sm " type="search" placeholder="Product Code" aria-label="Search"  aria-label="Recipient's username" aria-describedby="basic-addon2">--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
+                    <div class="input-group mb-3 col-lg-2">
+                        <input type="text" class="form-control form-control-sm" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-sm" type="button"><i class="bi-search"></i></button>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -71,10 +81,7 @@
 
     </div>
     <div class="col-4">
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Product Code" aria-label="Search">
-            <button class="btn btn-outline-dark my-2 my-sm-0 btn-sm" type="submit">Search</button>
-        </form>
+
     </div>
 </div>
 

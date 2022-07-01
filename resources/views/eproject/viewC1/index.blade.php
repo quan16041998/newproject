@@ -91,29 +91,11 @@
             <div class="row">
 
                 <!-- PRODUCT-->
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="product text-center">
-                        <div class="position-relative mb-3">
-                            <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                            <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/giay/giay20.jpg')}}" alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">MLB Chunky High LA Dodgers Purple</a></h6>
-                        <p class="small text-muted"></p>
-                    </div>
-                </div>
-
               <div class="col-xl-3 col-lg-4 col-sm-6">
                 <div class="product text-center">
                   <div class="position-relative mb-3">
                     <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/giay/giay14.png')}}" alt="..."></a>
+                      <img height="260px" width="200px" class="" src="{{asset('images/giay/giay14.png')}}" alt="..."></a>
                     <div class="product-overlay">
                       <ul class="mb-0 list-inline">
                         <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
@@ -131,7 +113,7 @@
                 <div class="product text-center">
                   <div class="position-relative mb-3">
                     <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/product/00034-DOLCE-GABBANA-MENSWEAR-SPRING-21.webp')}}" alt="..."></a>
+                      <img height="260px" width="200px" class="" src="{{asset('images/product/00034-DOLCE-GABBANA-MENSWEAR-SPRING-21.webp')}}" alt="..."></a>
                     <div class="product-overlay">
                       <ul class="mb-0 list-inline">
                         <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
@@ -149,7 +131,7 @@
                 <div class="product text-center">
                   <div class="position-relative mb-3">
                     <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="300px" width="300px" class="img-fluid w-100" src="{{asset('images/product/TAKASHI MURAKAMI SAPPHIRE RAINBOW.png')}}" alt="..."></a>
+                      <img height="260px" width="200px" class="" src="{{asset('images/product/TAKASHI MURAKAMI SAPPHIRE RAINBOW.png')}}" alt="..."></a>
                     <div class="product-overlay">
                       <ul class="mb-0 list-inline">
                         <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
