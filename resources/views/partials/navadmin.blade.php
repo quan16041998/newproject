@@ -53,9 +53,9 @@
             <a class="dropdown-item" href="{{route('admin.createcollection')}}">New Collection</a>
           </div>
         </li>
-
+      </ul>
+    </div>
         <ul class="navbar-nav mr-auto" style="float: right">
-
           <li class="nav-item mr-3" style="float: right">
             <a class="nav-link" href="#">
               <i class="bi bi-person"></i>
