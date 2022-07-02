@@ -41,7 +41,7 @@
     </div>
     <div class="container">
         <!-- HERO SECTION-->
-        <section class="py-5 bg-light"  style="background: url({{asset("images/phong/phong01.webp")}})">
+        <section class="py-5 bg-light"  style="background: url({{asset("images/viewC1/hero-shop.jpg")}})">
             <div class="container">
                 <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
                     <div class="col-lg-6">
@@ -150,7 +150,7 @@
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product text-center">
                                     <div class="mb-3 position-relative">
-                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="" src="{{asset("images/product/".$p->urlimg)}}" width="200px" height="250px" alt="..."></a>
+                                        <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail', ['id' => $p->CID])}}"><img class="" src="{{asset("images/product/".$p->urlimg)}}" width="200px" height="250px" alt="..."></a>
                                         <div class="product-overlay">
                                             <ul class="mb-0 list-inline" style="padding-top: 1rem">
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
@@ -161,7 +161,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">{{$p->product_code}}</a></h6>
+                                    <h6> <a class="reset-anchor" href="{{route('viewC1.detail', ['id' => $p->CID])}}">{{$p->product_code}}</a></h6>
                                     <p class="small text-muted">{{$price}}$</p>
                                 </div>
                             </div>

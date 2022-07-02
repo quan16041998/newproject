@@ -41,9 +41,9 @@
 {{--                        </form>--}}
 {{--                    </div>--}}
                     <form class="input-group mb-3 col-lg-2 form-inline" method="get" action="{{route('viewC1.search')}}">
-                        <input type="text" class="form-control form-control-sm " placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control form-control-sm " placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2" name="search">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary btn-sm" type="button"><i class="bi-search"></i></button>
+                            <button type="submit" class="btn-outline-warning"><i class="bi-search"></i> </button>
                         </div>
                     </form>
                 </div>

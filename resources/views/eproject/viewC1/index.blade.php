@@ -66,7 +66,7 @@
             </header>
             <div class="row">
                 @foreach($collection as $c)
-                <div class="col-md-3"><a class="category-item" href="{{route('viewC1.shop')}}">
+                <div class="col-md-3"><a class="category-item" href="{{route('viewC1.viewcollection', ['id' => $c->CollectionID])}}">
                         <img   width="200px"  height="250px" src="{{asset("images/collection/".$c->urlimg)}}" alt=""/>
                         <strong class="category-item-title">{{$c->name}}</strong></a>
                 </div>

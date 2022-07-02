@@ -258,9 +258,13 @@ Route::group(['prefix' => 'viewC1'], function (){
         'as' => 'viewC1.viewstylist'
     ]);
 
-    Route::post('updatecustomer/{id}',[
-        'uses' => 'ViewC1ControllerWithRepos@updatecustomer',
-        'as' => 'admin.updatecustomer'
+    Route::get('detail/{id}',[
+        'uses' => 'ViewC1ControllerWithRepos@detail',
+        'as' => 'viewC1.detail'
+    ]);
+    Route::get('search',[
+        'uses' => 'ViewC1ControllerWithRepos@search',
+        'as' => 'viewC1.search'
     ]);
 
 });

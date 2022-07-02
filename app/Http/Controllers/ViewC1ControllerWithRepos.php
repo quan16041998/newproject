@@ -21,7 +21,20 @@ class ViewC1ControllerWithRepos extends Controller
         ]);
     }
     public function search(Request $request){
+        $search = $request->input('search');
+        $product = AdminRepos::getProductbySearch($request->input('search'));
+        $collection = AdminRepos::getallcollection();
+        $stylist = AdminRepos::getallstylist();
+        if(!isset($search)){
 
+            return redirect()->action('ViewC1ControllerWithRepos@shop');
+        }else{
+            return view('eproject.viewC1.search',
+                [   'product' => $product,
+                    'collection' => $collection,
+                    'stylist' => $stylist
+                ]);
+        }
     }
 
     public function shop(){
@@ -61,7 +74,7 @@ class ViewC1ControllerWithRepos extends Controller
             'stylistname'=> $stylistname[0]
         ]);
     }
-    
+
     public function detail($id){
         $product = AdminRepos::getProductById($id);
         $collection = AdminRepos::getcollectionbyProductid($id);
@@ -73,5 +86,5 @@ class ViewC1ControllerWithRepos extends Controller
         ]);
 
     }
-   
+
 }
