@@ -40,12 +40,13 @@ class ViewC1ControllerWithRepos extends Controller
     public function viewcollection($id){
         $collection = AdminRepos::getallcollection();
         $stylist = AdminRepos::getallstylist();
+        $collectionname = AdminRepos::getcollectionbyid($id);
         return view('eproject.viewC1.viewcollection',[
             'collection' => $collection,
             'stylist' => $stylist,
             'product' => DB::table('product')->where('CollectionID','=',$id)->paginate(12),
             'sum'=> DB::table('product')->where('CollectionID','=',$id)->count(),
-            'collectionname'=>DB::table('collection')->where('CollectionID','=',$id)
+            'collectionname'=>$collectionname[0]
         ]);
     }
     public function viewstylist($id){

@@ -45,7 +45,7 @@
 
     <!-- HERO SECTION-->
     <div class="container">
-        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url({{asset("images/phong/phong4.webp")}})" src="{{asset('images/logo/logo1.png')}}">
+        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url({{asset("images/phong/phong09.webp")}})" src="{{asset('images/logo/logo1.png')}}">
             <div class="container py-5">
                 <div class="row px-4 px-lg-5">
                     <div class="col-lg-6">

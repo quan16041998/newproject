@@ -41,7 +41,7 @@
     </div>
     <div class="container">
         <!-- HERO SECTION-->
-        <section class="py-5 bg-light">
+        <section class="py-5 bg-light"  style="background: url({{asset("images/phong/phong01.webp")}})">
             <div class="container">
                 <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
                     <div class="col-lg-6">

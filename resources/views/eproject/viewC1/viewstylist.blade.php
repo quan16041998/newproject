@@ -41,20 +41,20 @@
     </div>
     <div class="container">
         <!-- HERO SECTION-->
-        <section class="py-5 bg-light" style="background: url({{asset("images/phong/phong01.webp")}})">
+        <section class="py-5 bg-light" style="background: url({{asset("images/phong/phong3.jpg")}})">
             <div class="container">
                 <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
                     <div class="col-lg-6">
-                        <h1 class="h2 text-uppercase mb-0">{{$stylistname->name}}</h1>
+                        <h1 class="h2 text-uppercase mb-0" style="color: #dcb14a;">{{$stylistname->name}}</h1>
                     </div>
-                    <div class="col-lg-6 text-lg-end">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-lg-end mb-0 px-0 bg-light">
-                                <li class="breadcrumb-item"><a class="text-dark" href="{{route('viewC1.index')}}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Stylist</li>
-                            </ol>
-                        </nav>
-                    </div>
+{{--                    <div class="col-lg-6 text-lg-end">--}}
+{{--                        <nav aria-label="breadcrumb">--}}
+{{--                            <ol class="breadcrumb justify-content-lg-end mb-0 px-0 bg-light">--}}
+{{--                                <li class="breadcrumb-item"><a class="text-dark" href="{{route('viewC1.index')}}">Home</a></li>--}}
+{{--                                <li class="breadcrumb-item active" aria-current="page">Stylist</li>--}}
+{{--                            </ol>--}}
+{{--                        </nav>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </section>
@@ -150,7 +150,7 @@
                                 <div class="col-lg-4 col-sm-6">
                                     <div class="product text-center">
                                         <div class="mb-3 position-relative">
-                                            <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="" src="{{asset("images/product/".$p->urlimg)}}" width="200px" height="250px" alt="..."></a>
+                                            <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}"><img class="" src="{{asset("images/product/".$p->urlimg)}}" width="200px" height="220px" alt="..."></a>
                                             <div class="product-overlay">
                                                 <ul class="mb-0 list-inline" style="padding-top: 1rem">
                                                     <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
