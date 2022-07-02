@@ -253,6 +253,14 @@ Route::group(['prefix' => 'viewC1'], function (){
         'uses' => 'ViewC1ControllerWithRepos@viewcollection',
         'as' => 'viewC1.viewcollection'
     ]);
+    Route::get('collection',[
+        'uses' => 'ViewC1ControllerWithRepos@collection',
+        'as' => 'viewC1.collection'
+    ]);
+    Route::get('stylist',[
+        'uses' => 'ViewC1ControllerWithRepos@stylist',
+        'as' => 'viewC1.stylist'
+    ]);
     Route::get('viewstylist/{id}',[
         'uses' => 'ViewC1ControllerWithRepos@viewstylist',
         'as' => 'viewC1.viewstylist'

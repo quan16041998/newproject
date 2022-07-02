@@ -16,16 +16,32 @@
                         <li class="nav-item dropdown"><a type="button" class="nav-link dropdown-toggle" id="pagesDropdown"
                                                          href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collection</a>
                             <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
-                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.index')}}">View All</a>
-                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.shop')}}">View Collection</a>
-                              </div>
+                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.index')}}">View All Collection</a>
+                                        <a class="btn dropdown-toggle dropdown-item dropdown-menu-right"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Collection
+                                        </a>
+                                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                                            @foreach($collection as $c)
+                                            <a class="dropdown-item" href="{{route('viewC1.viewcollection', ['id' => $c->CollectionID])}}">{{$c->name}}</a>
+                                            @endforeach
+                                        </div>
+
+                                </div>
+
 
                         </li>
                         <li class="nav-item dropdown"><a type="button" class="nav-link dropdown-toggle" id="pagesDropdown"
                                                          href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stylist</a>
                             <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
                                 <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.index')}}">View All</a>
-                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.shop')}}">View Stylist</a>
+                                <a class="btn dropdown-toggle dropdown-item dropdown-menu-right"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   Stylist
+                                </a>
+                                <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                                    @foreach($stylist as $s)
+                                        <a class="dropdown-item" href="{{route('viewC1.viewcollection', ['id' => $s->SID])}}">{{$s->name}}</a>
+                                    @endforeach
+                                </div>
                             </div>
 
                         </li>
