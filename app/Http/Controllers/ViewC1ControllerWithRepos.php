@@ -61,4 +61,17 @@ class ViewC1ControllerWithRepos extends Controller
             'stylistname'=> $stylistname[0]
         ]);
     }
+    
+    public function detail($id){
+        $product = AdminRepos::getProductById($id);
+        $collection = AdminRepos::getcollectionbyProductid($id);
+        $stylist = AdminRepos::getstylistbyProductid($id);
+        return view('eproject.viewC1.detail',[
+            'product' => $product[0],
+            'collection' => $collection[0],
+            'stylist' => $stylist[0],
+        ]);
+
+    }
+   
 }
