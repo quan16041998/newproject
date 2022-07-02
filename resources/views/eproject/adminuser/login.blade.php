@@ -1,143 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-  <link rel="icon" href="Favicon.png">
-
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-        crossorigin="anonymous">
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
-    body {
-      margin: 0;
-      font-size: .9rem;
-      font-weight: 400;
-      line-height: 1.6;
-      color: #212529;
-      text-align: left;
-      background-color: #f5f8fa;
-    }
-
-    .navbar-laravel {
-      box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
-    }
-
-    .navbar-brand, .nav-link, .my-form, .login-form {
-      font-family: Raleway, sans-serif;
-    }
-
-    .my-form {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-    }
-
-    .my-form .row {
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    .login-form {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-    }
-
-    .login-form .row {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  </style>
-
-  <title>Login Admin Manager</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/vendor/bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/vendor/animate/animate.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/vendor/css-hamburgers/hamburgers.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/vendor/select2/select2.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/vendor/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
+  <title>Document</title>
 </head>
+
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
-  <div class="container">
-    <a class="navbar-brand" href="#">Admin</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-</nav>
-@include('partials.sessionmessage')
-@include('partials.ErrorsAll')
-<main class="login-form">
-  <div class="cotainer">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">Login</div>
-          <div class="card-body">
-            <form action="{{route('admin.signin')}}" method="post">
-              @csrf
-              <div class="form-group row">
-                <label for="username" class="col-md-4 col-form-label text-md-right">User Name</label>
-                <div class="col-md-6">
-                  <input type="text" id="username" class="form-control" name="username"  value="{{old('username')?? null}}" >
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-                <div class="col-md-6">
-                  <input type="password" id="password" class="form-control" name="password" required>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-6 offset-md-4">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" name="remember"> Remember Me
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
-                  Sign In
-                </button>
-                <a href="#" class="btn btn-link">
-                  Forgot Your Password?
-                </a>
-              </div>
-            </form>
-          </div>
-        </div>
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="login100-pic js-tilt" data-tilt>
+        <img src="{{asset('images/img-01.png')}}" alt="IMG">
       </div>
+      <form class="login100-form validate-form" action="{{route('admin.signin')}}" method="post">
+					<span class="login100-form-title">
+            <h1>Admin Login</h1>
+					</span>
+        @include('partials.sessionmessage')
+        @include('partials.ErrorsAll')
+        @csrf
+        <div class="wrap-input100" data-validate = "Valid email is required: ex@abc.xyz">
+          <input type="text" id="username" class="input100" name="username"  value="{{old('username')?? null}}"
+                 placeholder="Username">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+        </div>
+
+        <div class="wrap-input100 validate-input">
+          <input type="password" id="password" class="input100" name="password" value="{{old('password')?? null}}"
+                 placeholder="Password">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+        </div>
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn">
+            Login
+          </button>
+        </div>
+
+        <div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+          <a class="txt2" href="#">
+            Username / Password?
+          </a>
+        </div>
+
+        <div class="text-center p-t-136">
+          <a class="txt2" href="#">
+            Create your Account
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+          </a>
+        </div>
+      </form>
     </div>
   </div>
-  </div>
-
-</main>
+</div>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-        crossorigin="anonymous"></script>
+
+<script src="{{asset('css/vendor/bootstrap/js/popper.js')}}"></script>
+<script src="{{asset('css/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('css/vendor/select2/select2.min.js')}}"></script>
+<script src="{{asset('css/vendor/tilt/tilt.jquery.min.js')}}"></script>
+<script >
+  $('.js-tilt').tilt({
+    scale: 1.1
+  })
+</script>
+<script src="js/main.js"></script>
+
 </body>
 </html>

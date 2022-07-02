@@ -47,17 +47,20 @@
                         <div class="col-sm-2 p-sm-0 order-2 order-sm-1 mt-2 mt-sm-0 px-xl-2">
                             <div class="swiper product-slider-thumbs">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{asset("images/product/".$product->urlimg)}}" alt="..."></div>
-                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{asset("images/product/".$product->urlimg)}}" alt="..."></div>
-                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{asset("images/product/".$product->urlimg)}}" alt="..."></div>
-                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{asset("images/product/".$product->urlimg)}}" alt="..."></div>
+                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="img/product-detail-1.jpg" alt="..."></div>
+                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="img/product-detail-2.jpg" alt="..."></div>
+                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="img/product-detail-3.jpg" alt="..."></div>
+                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="img/product-detail-4.jpg" alt="..."></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-10 order-1 order-sm-2">
                             <div class="swiper product-slider">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide h-auto"><a class="lightbox product-view" href="{{asset("images/product/".$product->urlimg)}}" data-gallery="gallery2" data-glightbox="Product item 1"><img class="img-fluid" src="{{asset("images/product/".$product->urlimg)}}" alt="..."></a></div>
+                                    <div class="swiper-slide h-auto"><a class="glightbox product-view" href="img/product-detail-1.jpg" data-gallery="gallery2" data-glightbox="Product item 1"><img class="img-fluid" src="img/product-detail-1.jpg" alt="..."></a></div>
+                                    <div class="swiper-slide h-auto"><a class="glightbox product-view" href="img/product-detail-2.jpg" data-gallery="gallery2" data-glightbox="Product item 2"><img class="img-fluid" src="img/product-detail-2.jpg" alt="..."></a></div>
+                                    <div class="swiper-slide h-auto"><a class="glightbox product-view" href="img/product-detail-3.jpg" data-gallery="gallery2" data-glightbox="Product item 3"><img class="img-fluid" src="img/product-detail-3.jpg" alt="..."></a></div>
+                                    <div class="swiper-slide h-auto"><a class="glightbox product-view" href="img/product-detail-4.jpg" data-gallery="gallery2" data-glightbox="Product item 4"><img class="img-fluid" src="img/product-detail-4.jpg" alt="..."></a></div>
                                 </div>
                             </div>
                         </div>
@@ -72,15 +75,11 @@
                         <li class="list-inline-item m-0 3"><i class="fas fa-star small text-warning"></i></li>
                         <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i></li>
                     </ul>
-                    @php
-                        $price = number_format($product->price);
-                        $size = explode('-',$product->size);
-                    @endphp
                     <h1>{{$product->product_code}}</h1>
-                    <p class="text-muted lead">{{$price}}$</p>
-                    <p class="text-sm mb-4">Size: <a class="btn btn-sm btn-light mx-1">{{$size[0]}}</a><a class="btn btn-sm btn-light mx-1">{{$size[1]}}</a><a class="btn btn-sm btn-light mx-1">{{$size[2]}}</a></p>
-                    <p class="text-sm mb-4">Collection: {{$collection->name}}</p>
-                    <p class="text-sm mb-4">Stylist: {{$stylist->name}}</p>
+                    <p class="text-muted lead">{{$product->price}}</p>
+                    <p class="text-sm mb-4">Size:{{$product->size}}</p>
+                    <p class="text-sm mb-4">Collection: {{$product->CollectionID}}</p>
+                    <p class="text-sm mb-4">Collection: {{$product->SID}}</p>
                     <div class="row align-items-stretch mb-4">
                         <div class="col-sm-5 pr-sm-0">
                             <div class="border d-flex align-items-center justify-content-between py-1 px-3 bg-white border-white"><span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
