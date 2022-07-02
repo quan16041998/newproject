@@ -230,7 +230,7 @@ Route::group(['prefix' => 'viewC1'], function (){
         'as' => 'viewC1.shop'
     ]);
 
-    Route::get('detail', [
+     Route::get('detail/{id}', [
         'uses' => 'ViewC1ControllerWithRepos@detail',
         'as' => 'viewC1.detail'
     ]);
