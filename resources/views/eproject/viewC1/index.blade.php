@@ -45,12 +45,12 @@
 
     <!-- HERO SECTION-->
     <div class="container">
-        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url({{asset("images/ViewC1/hero-banner-alt.jpg")}})" src="{{asset('images/ViewC1/hero-banner-alt.jpg')}}">
+        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url({{asset("images/phong/phong4.webp")}})" src="{{asset('images/logo/logo1.png')}}">
             <div class="container py-5">
                 <div class="row px-4 px-lg-5">
                     <div class="col-lg-6">
-                        <p class="text-muted small text-uppercase mb-2">New Inspiration 2022</p>
-                        <h1 class="h2 text-uppercase mb-3">20% off on new season</h1>
+                        <p class="text-muted small text-uppercase mb-2" style="color: #dcb14a;">New Inspiration 2022</p>
+                        <h1 class="h2 text-uppercase mb-3" style="color: #dcb14a;">20% off on new season</h1>
                         <a class="btn btn-dark" href="{{route('viewC1.shop')}}">Browse collections</a>
                     </div>
                 </div>
@@ -59,164 +59,45 @@
 
 
         <!-- CATEGORIES SECTION-->
-        <section class="pt-5">
+        <section class="mx-auto my-5 text-center">
             <header class="text-center">
-                <p class="small text-muted small text-uppercase mb-1">Carefully created collections</p>
+                <p class="small text-muted small text-uppercase mb-1">Hot collections</p>
                 <h2 class="h5 text-uppercase mb-4">Browse our categories</h2>
             </header>
             <div class="row">
-                <div class="col-md-4"><a class="category-item" href="{{route('viewC1.shop')}}">
-                        <img class="img-fluid" src="{{asset("images/product/00001-DOLCE-GABBANA-MENSWEAR-SPRING-21.webp")}}" alt=""/>
-                        <strong class="category-item-title">Summer 2022</strong></a>
+                @foreach($collection as $c)
+                <div class="col-md-3"><a class="category-item" href="{{route('viewC1.shop')}}">
+                        <img   width="200px"  height="250px" src="{{asset("images/collection/".$c->urlimg)}}" alt=""/>
+                        <strong class="category-item-title">{{$c->name}}</strong></a>
                 </div>
-                <div class="col-md-4"><a class="category-item mb-4" href="{{route('viewC1.shop')}}"><img class="img-fluid" src="{{asset('images/ViewC1/cat-img-2.jpg')}}" alt=""/>
-                        <strong class="category-item-title">SHOES</strong></a>
-                    <br>
-                    <a class="category-item" href="{{route('viewC1.shop')}}"><img class="img-fluid" src="{{asset('images/ViewC1/cat-img-3.jpg')}}" alt=""/>
-                        <strong class="category-item-title">Watch</strong></a>
-                </div>
-                <div class="col-md-4"><a class="category-item" href="{{route('viewC1.shop')}}">
-                        <img class="img-fluid" src="{{asset("images/product/00001-burberry-fall-2022-menswear-credit-brand.webp")}}" alt=""/>
-                        <strong class="category-item-title">Winter 2022</strong></a>
-                </div>
+                @endforeach
+            </div>
+        </section>
+        <section class="mx-auto my-5 container-fluid text-center">
+            <header class="text-center">
+                <p class="small text-muted small text-uppercase mb-1">Hot Stylist</p>
+                <h2 class="h5 text-uppercase mb-4">Browse our Stylist</h2>
+            </header>
+            <div class="row">
+                @foreach($stylist as $s)
+                    <div class="col-lg-4"><a class="category-item" href="{{route('viewC1.shop')}}">
+                            <img   width="200px"  height="250px" src="{{asset("images/stylist/".$s->urlimg)}}" alt=""/>
+                            <strong class="category-item-title ">{{$s->name}}</strong></a>
+                    </div>
+                @endforeach
             </div>
         </section>
 
-        <!-- TRENDING PRODUCTS-->
-        <section class="py-5">
-            <header>
-                <p class="small text-muted small text-uppercase mb-1">Made the hard way</p>
-                <h2 class="h5 text-uppercase mb-4">Top trending products</h2>
-            </header>
-            <div class="row">
+{{--       Slide--}}
 
-                <!-- PRODUCT-->
-              <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="position-relative mb-3">
-                    <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="260px" width="200px" class="" src="{{asset('images/giay/giay14.png')}}" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                        <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">Nike Air Jordan 1 Retro High Dior Like Auth</a></h6>
-                  <p class="small text-muted"></p>
-                </div>
-              </div>
 
-              <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="position-relative mb-3">
-                    <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="260px" width="200px" class="" src="{{asset('images/product/00034-DOLCE-GABBANA-MENSWEAR-SPRING-21.webp')}}" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                        <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">00034-DOLCE-GABBANA-MENSWEAR-SPRING</a></h6>
-                  <p class="small text-muted"></p>
-                </div>
-              </div>
 
-              <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                  <div class="position-relative mb-3">
-                    <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail')}}">
-                      <img height="260px" width="200px" class="" src="{{asset('images/product/TAKASHI MURAKAMI SAPPHIRE RAINBOW.png')}}" alt="..."></a>
-                    <div class="product-overlay">
-                      <ul class="mb-0 list-inline">
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{route('viewC1.shop')}}">Add to cart</a></li>
-                        <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <h6> <a class="reset-anchor" href="{{route('viewC1.detail')}}">TAKASHI MURAKAMI SAPPHIRE RAINBOW</a></h6>
-                  <p class="small text-muted"></p>
-                </div>
-              </div>
-
-                <!-- SERVICES-->
-                <section class="py-5 bg-light">
-                    <div class="container">
-                        <div class="row text-center gy-3">
-                            <div class="col-md-4">
-                                <div class="d-inline-block">
-                                    <div class="d-flex align-items-end">
-                                        <svg class="svg-icon svg-icon-big svg-icon-light">
-                                            <use xlink:href="#delivery-time-1"> </use>
-                                        </svg>
-                                        <div class="text-start ms-3">
-                                            <h6 class="text-uppercase mb-1">Free shipping</h6>
-                                            <p class="text-sm mb-0 text-muted">Free shipping worldwide</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="d-inline-block">
-                                    <div class="d-flex align-items-end">
-                                        <svg class="svg-icon svg-icon-big svg-icon-light">
-                                            <use xlink:href="#helpline-24h-1"> </use>
-                                        </svg>
-                                        <div class="text-start ms-3">
-                                            <h6 class="text-uppercase mb-1">24 x 7 service</h6>
-                                            <p class="text-sm mb-0 text-muted">Free shipping worldwide</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="d-inline-block">
-                                    <div class="d-flex align-items-end">
-                                        <svg class="svg-icon svg-icon-big svg-icon-light">
-                                            <use xlink:href="#label-tag-1"> </use>
-                                        </svg>
-                                        <div class="text-start ms-3">
-                                            <h6 class="text-uppercase mb-1">Festivaloffers</h6>
-                                            <p class="text-sm mb-0 text-muted">Free shipping worldwide</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- NEWSLETTER-->
-                <section class="py-5">
-                    <div class="container p-0">
-                        <div class="row gy-3">
-                            <div class="col-lg-6">
-                                <h5 class="text-uppercase">Let's be friends!</h5>
-                                <p class="text-sm text-muted mb-0">Feed back us via email.</p>
-                            </div>
-                            <div class="col-lg-6">
-                                <form action="#">
-                                    <div class="input-group">
-                                        <input class="form-control form-control-lg" type="email" placeholder="Enter your email address" aria-describedby="button-addon2">
-                                        <button class="btn btn-dark" id="button-addon2" type="submit">Subscribe</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-@endsection
+        @endsection
 @section('script')
     <script>
         $('#productView').on('shown.bs.modal', function () {
             $('#myInput').trigger('focus')
         })
+        $('.carousel').carousel()
     </script>
 @endsection

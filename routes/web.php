@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ViewC1ControllerWithReposController;
 
 /*
 |--------------------------------------------------------------------------
@@ -243,6 +244,23 @@ Route::group(['prefix' => 'viewC1'], function (){
         'uses' => 'ViewC1ControllerWithRepos@checkout',
         'as' => 'viewC1.checkout'
     ]);
+    Route::post('search',[
+        'uses' => 'ViewC1ControllerWithRepos@search',
+        'as'  => 'viewC1.search'
+    ]);
 
+    Route::get('viewcollection/{id}',[
+        'uses' => 'ViewC1ControllerWithRepos@viewcollection',
+        'as' => 'viewC1.viewcollection'
+    ]);
+    Route::get('viewstylist/{id}',[
+        'uses' => 'ViewC1ControllerWithRepos@viewstylist',
+        'as' => 'viewC1.viewstylist'
+    ]);
+
+    Route::post('updatecustomer/{id}',[
+        'uses' => 'ViewC1ControllerWithRepos@updatecustomer',
+        'as' => 'admin.updatecustomer'
+    ]);
 
 });

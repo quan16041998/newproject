@@ -27,31 +27,16 @@
                   <th><input class="form-control" name="introduce" id="introduce" type="text" value="{{old('introduce')}}"></th>
                 </tr>
 
-                @php
-                  $sid = old('SID') ??  null;
-                @endphp
-                <tr>
 
-                </tr>
-                <tr>
-                  <th><label for="stylist" class="font-weight-bold">Stylist</label></th>
-                  <th><select name="stylist" class="form-control" id="stylist" required>
-                      <option value="0">Please select a stylist :)</option>
-                      @foreach($stylist as $s)
-                        <option value="{{ $s->SID }}"
-                          {{ ($sid != null && $s->SID == $sid) ? 'selected' : '' }}
-                        >{{ $s->name }}</option>
-                      @endforeach
-                    </select></th>
-                </tr>
                 </thead>
               </table>
             </div>
           </div>
         </div>
       </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+        <a type="button" href="{{route('admin.collectionindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
     </form>
-    <button type="submit" class="btn btn-dark">Submit</button>
-    <a type="button" href="{{route('admin.collectionindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
+
   </div>
 @endsection

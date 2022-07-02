@@ -31,7 +31,12 @@ class AdminRepos
         DB::select($sql, [$admin->password,$admin->name, $admin->dob, $admin->contact, $admin->email, $admin->username]);
     }
 
-
+    public static function getProductbySearch($request){
+        $sql = "select * ";
+        $sql .= "from product ";
+        $sql .= "where product_code like ? ";
+        return DB::select($sql, ['%'.$request.'%']);
+    }
 
 
 
@@ -47,7 +52,7 @@ class AdminRepos
     public static function getallcollection(){
         $sql = 'select * ';
         $sql .= 'from collection ';
-        $sql .='order by name ';
+
 
         return DB::select($sql);
     }
@@ -62,9 +67,9 @@ class AdminRepos
 
     public static function insertcollection($collection){
         $sql = 'insert into collection ';
-        $sql .= '(name, stylist, urlimg, introduce) ';
-        $sql .= 'values(?, ? ,?, ? ) ';
-        $result = DB::insert($sql, [$collection->name,$collection->stylist,$collection->urlimg,$collection->introduce]);
+        $sql .= '(name, urlimg, introduce) ';
+        $sql .= 'values(?, ? , ? ) ';
+        $result = DB::insert($sql, [$collection->name,$collection->urlimg,$collection->introduce]);
 
         if($result){
             return DB::getPdo()->lastInsertID();
@@ -90,6 +95,14 @@ class AdminRepos
         $sql = "select * ";
         $sql .= "from product ";
         $sql .= "where CollectionID = ? ";
+
+
+        return DB::select($sql, [$id]);
+    }
+    public static function  getproductbySID($id){
+        $sql = "select * ";
+        $sql .= "from product ";
+        $sql .= "where SID = ? ";
 
 
         return DB::select($sql, [$id]);
