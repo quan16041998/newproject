@@ -77,9 +77,6 @@
                     </ul>
                     <h1>{{$product->product_code}}</h1>
                     <p class="text-muted lead">{{$product->price}}</p>
-                    <p class="text-sm mb-4">Size:{{$product->size}}</p>
-                    <p class="text-sm mb-4">Collection: {{$product->CollectionID}}</p>
-                    <p class="text-sm mb-4">Collection: {{$product->SID}}</p>
                     <div class="row align-items-stretch mb-4">
                         <div class="col-sm-5 pr-sm-0">
                             <div class="border d-flex align-items-center justify-content-between py-1 px-3 bg-white border-white"><span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
@@ -93,9 +90,9 @@
                         <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="cart.html">Add to cart</a></div>
                     </div><a class="text-dark p-0 mb-4 d-inline-block" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a><br>
                     <ul class="list-unstyled small d-inline-block">
-                        <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">SKU:</strong><span class="ms-2 text-muted">039</span></li>
-                        <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Category:</strong><a class="reset-anchor ms-2" href="#!">Demo Products</a></li>
-                        <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Tags:</strong><a class="reset-anchor ms-2" href="#!">Innovation</a></li>
+                        <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">Size:</strong><a class="reset-anchor ms-2">{{$product->size}}</a>
+                        <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Collection:</strong><a class="reset-anchor ms-2">{{$product->CollectionID}}</a>></li>
+                        <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Stylist</strong><a class="reset-anchor ms-2">{{$product->SID}}</a></li>
                     </ul>
                 </div>
             </div>
