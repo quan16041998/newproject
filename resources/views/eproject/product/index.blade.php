@@ -6,11 +6,11 @@
     <div class="card mb-4">
       <div class="card-header">
         <i class="fas fa-table me-1"></i>
-        Product Manager
+        <h2>Product Index</h2>
       </div>
       <div class="card-body">
         <div class="dataTable-container">
-          <table id="datatablesSimple" class="dataTable-table">
+          <table id="datatablesSimple" class="dataTable-table table-striped">
             <thead>
             <tr>
               <th data-sortable="" style="width: 28.9432%;"><a>Product Code</a></th>
@@ -26,19 +26,26 @@
                     $price = number_format($p->price);
                     $img = '/images/product/'
                 @endphp
-                <td data-toggle="tooltip"  data-placement="right" data-html="true" title="Images<image width='300px' height='400px' src='{{asset($img.$p->urlimg)}}'/>">
-                    {{$p->product_code}}
+                <td data-toggle="tooltip"  data-placement="right" data-html="true"
+                    title="Images<image width='300px' height='400px' src='{{asset($img.$p->urlimg)}}'/>">
+                  {{$p->product_code}}
                 </td>
                 <td>{{$p->price}}</td>
                 <td><a type="button" class="btn btn-info btn-sm"
-                       href="{{route('admin.showproduct', ['id' => $p->CID])}}"
-                  >Show</a> </td>
+                       href="{{route('admin.showproduct', ['id' => $p->CID])}}">
+                    <i class="bi bi-eye"></i>
+                  </a>
+                </td>
                 <td><a type="button" class="btn btn-success btn-sm"
-                       href="{{route('admin.editproduct', ['id' => $p->CID])}}"
-                  >Edit</a></td>
+                       href="{{route('admin.editproduct', ['id' => $p->CID])}}">
+                    <i class="bi bi-pencil-square"></i>
+                  </a>
+                </td>
                 <td><a type="button" class="btn btn-danger btn-sm"
-                       href="{{route('admin.confirmproduct', ['id' => $p->CID])}}"
-                  >Delete</a></td>
+                       href="{{route('admin.confirmproduct', ['id' => $p->CID])}}">
+                    <i class="bi bi-trash3"></i>
+                  </a>
+                </td>
               </tr>
             @endforeach
             </tbody>
