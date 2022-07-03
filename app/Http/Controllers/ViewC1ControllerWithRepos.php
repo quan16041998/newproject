@@ -41,7 +41,7 @@ class ViewC1ControllerWithRepos extends Controller
         $collection = AdminRepos::getallcollection();
         $stylist = AdminRepos::getallstylist();
         return view('eproject.viewC1.shop',[
-            'product' => DB::table('product')->orderBy('price', 'desc')->paginate(12),
+            'product' => DB::table('product')->paginate(12),
             'collection' => $collection,
             'stylist' => $stylist
         ]);
