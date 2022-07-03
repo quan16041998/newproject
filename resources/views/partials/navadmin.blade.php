@@ -1,8 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark " style="margin-bottom:10rem ">
   <div class="container-fluid">
-      <a class="navbar-brand" href="{{route('admin.adminindex')}}">
-          <img src="{{asset('images/logo/download.jpg')}}" alt="Logo" style="width:40px;">
-      </a>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
@@ -63,15 +60,12 @@
                   \Illuminate\Support\Facades\Session::get('username') : ''}}
             </a>
           </li>
-
           <li class="nav-item" style="float: right">
             <a class="nav-link" href="{{route('admin.signout')}}">
               <i class="bi bi-box-arrow-left"></i>
               Logout
             </a>
           </li>
-
-
         </ul>
       </ul>
     </div>
