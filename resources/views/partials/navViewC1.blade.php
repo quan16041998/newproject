@@ -56,10 +56,19 @@
 {{--                            <input class="form-control-sm " type="search" placeholder="Product Code" aria-label="Search"  aria-label="Recipient's username" aria-describedby="basic-addon2">--}}
 {{--                        </form>--}}
 {{--                    </div>--}}
-                    <form class="input-group mb-3 col-lg-2 form-inline" method="get" action="{{route('viewC1.search')}}">
-                        <input type="text" class="form-control form-control-sm " placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2" name="search">
-                        <div class="input-group-append">
-                            <button type="submit" class="btn-outline-warning"><i class="bi-search"></i> </button>
+{{--                    <form class="input-group mb-3 col-lg-2 form-inline" method="get" action="{{route('viewC1.search')}}">--}}
+{{--                        <input type="text" class="form-control form-control-sm " placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2" name="search">--}}
+{{--                        <div class="input-group-append">--}}
+{{--                            <button type="submit" class="btn-outline-warning"><i class="bi-search"></i> </button>--}}
+{{--                        </div>--}}
+{{--                    </form>--}}
+                    <form class="navbar-form" method="get" action="{{route('viewC1.search')}}">
+                        <div class="input-group no-border">
+                            <input type="text" value="" class="form-control" placeholder="Search...">
+                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                <i class="material-icons">search</i>
+                                <div class="ripple-container"></div>
+                            </button>
                         </div>
                     </form>
                 </div>
