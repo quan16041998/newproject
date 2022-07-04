@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="{{asset('css/styles.css')}}">
-    <link rel="stylesheet" href="{{asset('css/manager.css')}}">
+    <link rel="stylesheet" href="public/css/manager.css">
   <title>Document</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 </header>
 
 
-<main role="main">
+<main role="main" >
   @yield('main')
 </main>
 @yield('script')

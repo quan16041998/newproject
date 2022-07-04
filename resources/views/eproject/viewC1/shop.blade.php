@@ -1,7 +1,7 @@
 @extends('masters.viewC1master')
 @section('main')
 
-    <div class="modal fade" id="productView" tabindex="-1">
+    <div class="modal fade" id="sosanh" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content overflow-hidden border-0">
                 <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -17,9 +17,9 @@
                                     <li class="list-inline-item m-0 3"><i class="fas fa-star small text-warning"></i></li>
                                     <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i></li>
                                 </ul>
-                                <h2 class="h4">Red digital smartwatch</h2>
+                                <h2 class="h4" id="show1">Red digital smartwatch</h2>
                                 <p class="text-muted">$250</p>
-                                <p class="text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.</p>
+                                <p class="text-sm mb-4"></p>
                                 <div class="row align-items-stretch mb-4 gx-0">
                                     <div class="col-sm-7">
                                         <div class="border d-flex align-items-center justify-content-between py-1 px-3"><span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
@@ -35,10 +35,12 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+
     <div class="container">
         <!-- HERO SECTION-->
         <section class="py-5 bg-light"  style="background: url({{asset("images/viewC1/hero-shop.jpg")}})">
@@ -147,7 +149,16 @@
                                 @php
                                     $price = number_format($p->price);
                                 @endphp
+
                             <div class="col-lg-4 col-sm-6">
+                                <form class="of-hidden">
+                                    @csrf
+                                    <input type="hidden" id="id1" value="{{$p->product_code}}">
+                                    <input type="hidden" id="id2" value="{{$price}}">
+                                    <input type="hidden" id="id3" value="{{$p->fabric}}">
+                                    <input type="hidden" id="id4" value="{{$p->size}}">
+                                    <input type="hidden" id="id5" value="{{$p->urlimg}}">
+                                </form>
                                 <div class="product text-center">
                                     <div class="mb-3 position-relative">
                                         <div class="badge text-white bg-"></div><a class="d-block" href="{{route('viewC1.detail', ['id' => $p->CID])}}"><img class="" src="{{asset("images/product/".$p->urlimg)}}" width="200px" height="250px" alt="..."></a>
@@ -156,7 +167,7 @@
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
                                                 <li class="list-inline-item mr-0">
-                                                    <a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal">
+                                                    <a class="btn btn-sm btn-outline-dark"  data-target="#sosanh" data-toggle="modal" >
                                                         <i class="fas fa-expand"></i></a></li>
                                             </ul>
                                         </div>
@@ -186,9 +197,8 @@
     </div>
 @endsection
 @section('script')
-    <script>
-        $('#productView').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        })
-    </script>
+<script>
+    $('#sosanh').modal()
+</script>
+
 @endsection

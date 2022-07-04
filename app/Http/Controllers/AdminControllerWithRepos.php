@@ -61,7 +61,7 @@ class AdminControllerWithRepos extends Controller
     public function adminindex()
     {
         $admin = AdminRepos::getAllAdmin();
-        return view('eproject.admin.index',
+        return view('eproject.admin.table_list',
             [
                 'admin' => $admin
             ]);
@@ -81,7 +81,7 @@ class AdminControllerWithRepos extends Controller
 
 
         return view(
-            'eproject.admin.update',
+            'eproject.admin.edit',
             ["admin" => $admin[0]]);
     }
 

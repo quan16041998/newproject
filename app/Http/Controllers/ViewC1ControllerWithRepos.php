@@ -35,6 +35,7 @@ class ViewC1ControllerWithRepos extends Controller
                     'stylist' => $stylist
                 ]);
         }
+
     }
 
     public function shop(){
