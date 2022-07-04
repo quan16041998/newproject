@@ -11,7 +11,9 @@ use Illuminate\Support\Collection;
 
 class ViewC1ControllerWithRepos extends Controller
 {
-
+    public function signup(){
+        return view('eproject.viewC1.signup');
+    }
 
     public function index(){
 

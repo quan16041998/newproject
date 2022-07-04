@@ -274,5 +274,8 @@ Route::group(['prefix' => 'viewC1'], function (){
         'uses' => 'ViewC1ControllerWithRepos@search',
         'as' => 'viewC1.search'
     ]);
-
+    Route::get('signup',[
+        'uses' => 'ViewC1ControllerWithRepos@signup',
+        'as' => 'viewC1.signup'
+    ]);
 });
