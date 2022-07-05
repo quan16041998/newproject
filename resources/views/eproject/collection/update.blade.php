@@ -9,7 +9,6 @@
           <form method="get" action="{{route('admin.updatecollection', ['id' => old('id')?? $collection->CollectionID])}}"
                 autocomplete="off" class="form-horizontal">
             @csrf
-            @method('put')
 
             <div class="card ">
               <div class="card-header card-header-primary">

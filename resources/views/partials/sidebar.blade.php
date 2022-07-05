@@ -5,19 +5,12 @@
         Tip 2: you can also add an image using data-image tag
     -->
     <div class="logo">
-        <a href="https://creative-tim.com/" class="simple-text logo-normal">
+        <a target="_blank" href="" class="simple-text logo-normal">
             {{ __('QTK Manager  ') }}
         </a>
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link">
-                    <i class="material-icons">dashboard</i>
-                    <p>{{ __('Dashboard') }}</p>
-                </a>
-            </li>
-
             <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.adminindex')}}">
                     <i class="material-icons">content_paste</i>

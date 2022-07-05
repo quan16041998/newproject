@@ -1,13 +1,13 @@
 @extends('masters.newmaster')
 
 @section('main')
-    @include('partials.ErrorsAll')
-    @include('partials.sessionmessage')
   <div class="content">
+      @include('partials.ErrorsAll')
+      @include('partials.sessionmessage')
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="post" action="{{route('admin.updateadmin', ['username' => old('username')?? $admin->username])}}" autocomplete="off" class="form-horizontal">
+          <form method="post" action="{{route('admin.updateadmin', ['username' =>$admin->username])}}" autocomplete="off" class="form-horizontal">
             @csrf
             <div class="card ">
               <div class="card-header card-header-primary">
@@ -31,7 +31,8 @@
                   <label class="col-sm-2 col-form-label">{{ __('User Name') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="username" id="username" type="text" placeholder="{{ __('UserName') }}" value="{{ old('username')?? $admin->username }}" />
+                      <input class="form-control"  type="text" placeholder="{{ __('UserName') }}" value="{{ old('username')?? $admin->username }}" disabled />
+                        <input type="hidden" name="username" id="username" value="{{ old('username')?? $admin->username }}">
                     </div>
                   </div>
                 </div>

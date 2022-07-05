@@ -118,13 +118,14 @@ class AdminControllerWithRepos extends Controller
             $admin2 = AdminRepos::getadmin($request->input('username'));
             $admin3 = $request->input('oldpassword');
             $admin1 = $admin2[0]->password;
-            if(Hash::check($admin3, $admin1)){
+            if(!Hash::check($admin3, $admin1)){
+                return redirect()->action('AdminControllerWithRepos@editadmin',['username'=>$request->input('username')])
+                    ->with('msgs', 'Your old password is incorrect ');
 
+            }else{
                 AdminRepos::updateadmin($admin);
                 return redirect()->action('AdminControllerWithRepos@adminindex')->with('msg','Update Successfully');
-            }else{
-                return redirect()->action('AdminControllerWithRepos@updateadmin')
-                    ->with('msgs', 'Your password is incorrect ');
+
             }
 
     }
