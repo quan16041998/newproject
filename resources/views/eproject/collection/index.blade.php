@@ -2,6 +2,9 @@
 
 @section('main')
   <div class="content">
+  @include('partials.ErrorsAll')
+  @include('partials.sessionmessage')
+  @include('partials.allmessage')
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -10,7 +13,6 @@
               <h4 class="card-title ">Simple Table</h4>
               <p class="card-category"> Here is a subtitle for this table</p>
             </div>
-            @include('partials.allmessage')
             <div class="card-body">
               <div class="row">
                 <div class="col-12 text-right">
