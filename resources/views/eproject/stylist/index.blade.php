@@ -2,6 +2,9 @@
 
 @section('main')
   <div class="content">
+    @include('partials.ErrorsAll')
+    @include('partials.sessionmessage')
+    @include('partials.allmessage')
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
