@@ -52,19 +52,19 @@
                       <td>
                         <a type="button" class="btn btn-info btn-sm"
                            href="{{route('admin.showproduct',['id' => $p->CID])}}">
-                          <i class="bi bi-eye"></i>
+                          <span class="material-icons">visibility</span>
                         </a>
                       </td>
                       <td class="text-primary">
                         <a type="button" class="btn btn-success btn-sm"
                            href="{{route('admin.editproduct',['id' => $p->CID])}}">
-                          <i class="bi bi-pencil-square"></i>
+                          <span class="material-icons">edit</span>
                         </a>
                       </td>
                       <td class="text-primary">
                         <a type="button" class="btn btn-danger btn-sm"
                            href="{{route('admin.deleteproduct',['id' => $p->CID])}}">
-                          <i class="bi bi-pencil-square"></i>
+                          <span class="material-icons">delete</span>
                         </a>
                       </td>
                     </tr>
