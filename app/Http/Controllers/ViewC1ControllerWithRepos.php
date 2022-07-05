@@ -97,5 +97,61 @@ class ViewC1ControllerWithRepos extends Controller
     public function stylist(){
 
     }
+    
+     public function login(){
+        return view('eproject.viewC1.login');
+    }
+
+    public function signupcus(){
+        $customer = AdminRepos::getAllCustomer();
+        return view('eproject.viewC1.signup',
+        [
+          'customer' =>(object)[
+              'name' => '',
+              'dob' => '',
+              'contact' => '',
+              'email' => '',
+              'address' => ''
+          ],
+            'customer' => $customer
+        ]);
+    }
+
+    public function storecus(Request $request){
+        $this->formcustomerValidate($request)->validate();
+
+        $customer = (object)[
+            'name'=>$request->input('name'),
+            'dob'=>$request->input('dob'),
+            'contact'=>$request->input('contact'),
+            'email'=>$request->input('email'),
+            'address'=>$request->input('address')
+        ];
+
+        $newid = AdminRepos::insertcustomer($customer);
+        return redirect()->action('ViewC1ControllerWithRepos@login')->
+        with('msg', 'New customer with id: ' . $newid . ' has been inserted');
+    }
+
+
+    function formcustomerVailidate(Request $request){
+        return Validator::make(
+            $request->all(),[
+                'name'=>['required'],
+                'dob'=>['required'],
+                'contact'=>['required'],
+                'email' => ['required'],
+                'address' => ['required'],
+            ],
+            [
+                'name.required' => 'Stylist name can not be empty',
+                'dob.required' => 'dob can not be empty',
+                'contact.required' => 'contact can not be empty',
+                'email.required' => 'email can not be empty',
+                'address.required' => 'address can not be empty',
+
+            ]
+        );
+    }
 
 }
