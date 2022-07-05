@@ -48,19 +48,20 @@
                       <td>
                         <a type="button" class="btn btn-info btn-sm"
                            href="{{route('admin.showcollection',['id' => $c->CollectionID])}}">
-                          <i class="bi bi-eye"></i>
+                          <span class="material-icons">visibility</span>
                         </a>
                       </td>
                       <td>
                         <a type="button" class="btn btn-success btn-sm"
                            href="{{route('admin.editcollection',['id' => $c->CollectionID])}}">
-                          <i class="bi bi-pencil-square"></i>
+                          <span class="material-icons">edit</span>
                         </a>
                       </td>
                       <td>
                         <a type="button" class="btn btn-danger btn-sm"
                              href="{{route('admin.confirmcollection', ['id'=> $c->CollectionID])}}">
-                          <i class="bi bi-trash3"></i>
+                          <span class="material-icons">delete</span>
+
                         </a>
                       </td>
                     </tr>
