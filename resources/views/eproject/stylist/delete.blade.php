@@ -7,7 +7,7 @@
           <form method="post" action="{{route('admin.deletestylist', ['id' => old('id')?? $stylist->SID])}}"
                 autocomplete="off" class="form-horizontal">
             @csrf
-            @method('put')
+            <input type="hidden" name="id" value="{{$stylist->SID}}">
 
             <div class="card ">
               <div class="card-header card-header-primary">
