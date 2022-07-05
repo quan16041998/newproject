@@ -51,7 +51,7 @@
                                                 {{$p->product_code}}
                                             </td>
                                             <td>
-                                                {{$p->price}}
+                                                {{$price}}
                                             </td>
                                             <td>
                                                 <a type="button" class="btn btn-info btn-sm"
