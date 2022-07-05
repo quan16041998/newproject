@@ -490,8 +490,9 @@ class AdminControllerWithRepos extends Controller
         $this->formproductValidate($request)->validate();
 
         $product = (object)[
-            'product_code' => $request->input('product_name'),
+            'product_code' => $request->input('product_code'),
             'fabric' => $request->input('fabric'),
+            'price' => $request->input('price'),
             'size' => $request->input('size'),
             'urlimg' => $request->input('urlimg'),
             'CollectionID' => $request->input('CollectionID'),
@@ -575,7 +576,7 @@ class AdminControllerWithRepos extends Controller
 
     public function deleteproduct(Request $request, $id){
         if ($request->input('id') != $id){
-            return redirect()->action('AdminControllerWithRepos@productindex');
+            return redirect()->action('AdminControllerWithRepos@productindex') ->with('msg', 'Delete fall');
         }
 
         AdminRepos::deleteproduct($id);
@@ -593,9 +594,9 @@ class AdminControllerWithRepos extends Controller
                 'fabric' => ['required'],
                 'price' => ['required'],
                 'size' => ['required'],
-                'urlimg' => ['required'],
-                'collection' => ['required'],
-                'stylist' => ['required']
+
+                'CollectionID' => ['required'],
+                'SID' => ['required']
             ],
             [
                 'product_code.required' => 'Product code can not be empty',

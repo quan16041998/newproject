@@ -7,7 +7,7 @@
           <form method="post" action="{{route('admin.deleteproduct', ['id' => old('id')?? $product->CID])}}"
                 autocomplete="off" class="form-horizontal">
             @csrf
-
+              <input type="hidden" name="id" value="{{$product->CID}}">
             <div class="card ">
               <div class="card-header card-header-primary">
                 <h4 class="card-title">{{ __('Product Delete') }}</h4>

@@ -8,8 +8,6 @@
           <form method="get" action="{{route('admin.updatestylist', ['id' => old('id')?? $stylist->SID])}}"
                 autocomplete="off" class="form-horizontal">
             @csrf
-            @method('put')
-
             <div class="card ">
               <div class="card-header card-header-primary">
                 <h4 class="card-title">{{ __('Edit Profile') }}</h4>

@@ -274,7 +274,7 @@ class AdminRepos
             $product->urlimg, $product->CollectionID, $product->SID]);
 
         if ($result){
-            return DB::getPdo()->lastInsertCID();
+            return DB::getPdo()->lastInsertID();
         } else {
             return -1;
         }
