@@ -7,7 +7,7 @@
           <form method="post" action="{{route('admin.deletecollection', ['id' => old('id')?? $collection->CollectionID ])}}"
                 autocomplete="off" class="form-horizontal" enctype="multipart/form-data">
             @csrf
-
+            <input type="hidden" name="id" value="{{$collection->CollectionID}}">
             <div class="card ">
               <div class="card-header card-header-primary">
                 <h4 class="card-title">{{ __('Collection Delete') }}</h4>
