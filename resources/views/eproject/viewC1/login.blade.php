@@ -33,9 +33,14 @@
             <button>Login
                 <i class="zmdi zmdi-arrow-right"></i>
             </button>
-            <button href="{{route('viewC1.signup')}}">Register
-                <i class="zmdi zmdi-arrow-right"></i>
+            <button>
+                SignUp
+                <a class="btn btn-dark"  type="button" href="{{route('viewC1.signup')}}">
+                    <i class="zmdi zmdi-arrow-right"></i>
+                </a>
             </button>
+
+
         </form>
     </div>
 </div>

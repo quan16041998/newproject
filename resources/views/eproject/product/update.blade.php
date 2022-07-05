@@ -1,15 +1,16 @@
 @extends('masters.newmaster')
 
 @section('main')
+    @include('partials.ErrorsAll')
+    @include('partials.sessionmessage')
+    @include('partials.allmessage')
   <div class="content">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="get" action="{{route('admin.updateproduct', ['id' => old('id')?? $product->CID])}}"
+          <form method="post" action="{{route('admin.updateproduct', ['id' => old('id')?? $product->CID])}}"
                 autocomplete="off" class="form-horizontal">
             @csrf
-            @method('put')
-
             <div class="card ">
               <div class="card-header card-header-primary">
                 <h4 class="card-title">{{ __('Edit Profile') }}</h4>
@@ -28,6 +29,8 @@
                     </div>
                   </div>
                 @endif
+                  <input type="hidden" name="id" value="{{$product->CID}}">
+
                 <div class="row">
                   <label class="col-sm-2 col-form-label">{{ __('Product Code') }}</label>
                   <div class="col-sm-7">
@@ -54,7 +57,7 @@
                   <label class="col-sm-2 col-form-label">{{ __('Price') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="text" id="Price" type="Price" placeholder="{{ __('Price') }}"
+                      <input class="form-control" name="price" id="Price" type="text" placeholder="{{ __('Price') }}"
                              value="{{old('Price')?? $product->price}}"  />
                     </div>
                   </div>

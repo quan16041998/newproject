@@ -1,59 +1,85 @@
-@extends('masters.adminmaster')
+@extends('masters.newmaster')
 
 @section('main')
-  <div class="card-body">
-      @include('partials.allmessage')
-    <div class="card mb-4">
-      <div class="card-header">
-        <i class="fas fa-table me-1"></i>
-        <h2>Product Index</h2>
-      </div>
-      <div class="card-body">
-        <div class="dataTable-container">
-          <table id="datatablesSimple" class="dataTable-table table-striped">
-            <thead>
-            <tr>
-              <th data-sortable="" style="width: 28.9432%;"><a>Product Code</a></th>
-              <th data-sortable="" style="width: 15.5337%;">Price(USD)</th>
-              <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
-              <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
-              <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($product as $p)
-                @php
-                    $price = number_format($p->price);
-                    $img = '/images/product/'
-                @endphp
-                <td data-toggle="tooltip"  data-placement="right" data-html="true"
-                    title="Images<image width='300px' height='400px' src='{{asset($img.$p->urlimg)}}'/>">
-                  {{$p->product_code}}
-                </td>
-                <td>{{$p->price}}</td>
-                <td><a type="button" class="btn btn-info btn-sm"
-                       href="{{route('admin.showproduct', ['id' => $p->CID])}}">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                </td>
-                <td><a type="button" class="btn btn-success btn-sm"
-                       href="{{route('admin.editproduct', ['id' => $p->CID])}}">
-                    <i class="bi bi-pencil-square"></i>
-                  </a>
-                </td>
-                <td><a type="button" class="btn btn-danger btn-sm"
-                       href="{{route('admin.confirmproduct', ['id' => $p->CID])}}">
-                    <i class="bi bi-trash3"></i>
-                  </a>
-                </td>
-              </tr>
-            @endforeach
-            </tbody>
-          </table>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title ">Product Table</h4>
+                            <p class="card-category"> Here is a subtitle for this table</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 text-right">
+                                    <a href="{{route('admin.createproduct')}}" class="btn btn-sm btn-primary">Add Product</a>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                    <th>
+                                        Product_Code
+                                    </th>
+                                    <th>
+                                        price $
+                                    </th>
+                                    <th>
+                                        Detail
+                                    </th>
+                                    <th>
+                                        Edit
+                                    </th>
+                                    <th>
+                                        Delete
+                                    </th>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($product as $p)
+                                        @php
+                                            $price = number_format($p->price);
+                                            $img = 'images/product/'
+                                        @endphp
+                                        <tr>
+                                            <td data-toggle="tooltip"  data-placement="right" data-html="true"
+                                                title="Images<image width='300px' height='400px' src='{{asset($img.$p->urlimg)}}'/>">
+                                                {{$p->product_code}}
+                                            </td>
+                                            <td>
+                                                {{$p->price}}
+                                            </td>
+                                            <td>
+                                                <a type="button" class="btn btn-info btn-sm"
+                                                   href="{{route('admin.showproduct',['id' => $p->CID])}}">
+                                                    <span class="material-icons">visibility</span>
+                                                </a>
+                                            </td>
+                                            <td class="text-primary">
+                                                <a type="button" class="btn btn-success btn-sm"
+                                                   href="{{route('admin.editproduct',['id' => $p->CID])}}">
+                                                    <span class="material-icons">edit</span>
+                                                </a>
+                                            </td>
+                                            <td class="text-primary">
+                                                <a type="button" class="btn btn-danger btn-sm"
+                                                   href="{{route('admin.deleteproduct',['id' => $p->CID])}}">
+                                                    <span class="material-icons">delete</span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+
+
 @endsection
 @section('script')
     <script type="text/javascript">

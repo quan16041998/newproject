@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-12">
           @include('partials.ErrorsAll')
-          <form method="get" action="{{route('admin.storecollection', ['id' => old('id')?? $collection->CollectionID])}}"
+          <form method="get" action="{{route('admin.storecollection')}}"
                 autocomplete="off" class="form-horizontal">
             @csrf
             @method('put')
