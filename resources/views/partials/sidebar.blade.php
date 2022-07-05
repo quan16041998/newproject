@@ -12,7 +12,7 @@
     <div class="sidebar-wrapper">
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link">
                     <i class="material-icons">dashboard</i>
                     <p>{{ __('Dashboard') }}</p>
                 </a>
@@ -25,25 +25,25 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.adminindex')}}">
+                <a class="nav-link" href="{{route('admin.collectionindex')}}">
                     <i class="material-icons">content_paste</i>
                     <p>{{ __('Collection') }}</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.adminindex')}}">
+                <a class="nav-link" href="{{route('admin.stylistindex')}}">
                     <i class="material-icons">content_paste</i>
                     <p>{{ __('Stylist') }}</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.adminindex')}}">
+                <a class="nav-link" href="{{route('admin.productindex')}}">
                     <i class="material-icons">content_paste</i>
                     <p>{{ __('Product') }}</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.adminindex')}}">
+                <a class="nav-link" href="{{route('admin.customerindex')}}">
                     <i class="material-icons">content_paste</i>
                     <p>{{ __('Customer') }}</p>
                 </a>
