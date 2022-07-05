@@ -1,25 +1,50 @@
-@extends('masters.adminmaster')
+@extends('masters.newmaster')
 @section('main')
-  <div class="container">
-    @csrf
-    <dl class="row">
-      <div class="col-sm-6">
-        <dt class="col-sm-3">ID</dt>
-        <dd class="col-sm-9">{{ $collection->CollectionID }}</dd>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <form method="post" action="{{route('admin.showcollection', ['id' => old('id')?? $collection->CollectionID ])}}" autocomplete="off" class="form-horizontal">
+            @csrf
+            @method('put')
 
-        <dt class="col-sm-3">Name</dt>
-        <dd class="col-sm-9">{{ $collection->name }}</dd>
-        <dt class="col-sm-3">Introduce</dt>
-        <dd class="col-sm-9">{{$collection->introduce }}</dd>
-      </div>
-        @php
-        $img = 'images/collection/'
-        @endphp
-      <div class="col-sm-6">
-        <img src="{{asset($img.$collection->urlimg)}}" width="350px" height="400px">
-      </div>
+            <div class="card ">
+              <div class="card-header card-header-primary">
+                <h4 class="card-title">{{ __('Collection Detail') }}</h4>
+                <p class="card-category">{{ __('Collection information') }}</p>
+              </div>
+              <div class="card-body ">
+                @if (session('status'))
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <i class="material-icons">close</i>
+                        </button>
+                        <span>{{ session('status') }}</span>
+                      </div>
+                    </div>
+                  </div>
+                @endif
+                <dl class="row">
+                  <dt class="col-sm-3">Name</dt>
+                  <dd class="col-sm-9">{{ $collection->name }}</dd>
 
-    </dl>
-    <a type="button" href="{{route('admin.collectionindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
+                  <dt class="col-sm-3">Stylist</dt>
+                  <dd class="col-sm-9">{{ $collection->stylist }}</dd>
+
+                  <dt class="col-sm-3">Introduct</dt>
+                  <dd class="col-sm-9">{{ $collection->introduce  }}</dd>
+
+                </dl>
+                <div class="card-footer ml-auto mr-auto">
+
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 @endsection
