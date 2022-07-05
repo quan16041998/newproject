@@ -1,48 +1,79 @@
-@extends('masters.adminmaster')
+@extends('masters.newmaster')
+
 @section('main')
-    @include('partials.allmessage')
-  <div class="card-body">
-    <div class="card mb-4">
-      <div class="card-header">
-        <i class="fas fa-table me-1"></i>
-        <h2>Collection Index</h2>
-      </div>
-      <div class="card-body">
-        <div class="dataTable-container">
-          <table id="datatablesSimple" class="dataTable-table table-warning">
-            <thead>
-            <tr>
-              <th data-sortable="" style="width: 28.9432%;"><a>Name</a></th>
-              <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
-              <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
-              <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($collection as $c)
-              <tr>
-                <td>{{$c->name}}</td>
-                <td><a type="button" class="btn btn-info btn-sm"
-                       href="{{route('admin.showcollection', ['id'=> $c->CollectionID])}}">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                </td>
-                <td><a type="button" class="btn btn-success btn-sm"
-                       href="{{route('admin.editcollection', ['id'=> $c->CollectionID])}}">
-                    <i class="bi bi-pencil-square"></i>
-                  </a>
-                </td>
-                <td><a type="button" class="btn btn-danger btn-sm"
-                       href="{{route('admin.confirmcollection', ['id'=> $c->CollectionID])}}">
-                    <i class="bi bi-trash3"></i>
-                  </a>
-                </td>
-              </tr>
-            @endforeach
-            </tbody>
-          </table>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title ">Simple Table</h4>
+              <p class="card-category"> Here is a subtitle for this table</p>
+            </div>
+            @include('partials.allmessage')
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 text-right">
+                  <a href="{{route('admin.createcollection')}}" class="btn btn-sm btn-primary">Add Collection</a>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Stylist
+                  </th>
+                  <th>
+                    Detail
+                  </th>
+                  <th>
+                    Edit
+                  </th>
+                  <th>
+                    Delete
+                  </th>
+                  </thead>
+                  <tbody>
+                  @foreach($collection as $c)
+                    <tr>
+                      <td>
+                        {{$c->name}}
+                      </td>
+                      <td>
+                        {{$c->stylist}}
+                      </td>
+                      <td>
+                        <a type="button" class="btn btn-info btn-sm"
+                           href="{{route('admin.showcollection',['id' => $c->CollectionID])}}">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                      </td>
+                      <td>
+                        <a type="button" class="btn btn-success btn-sm"
+                           href="{{route('admin.editcollection',['id' => $c->CollectionID])}}">
+                          <i class="bi bi-pencil-square"></i>
+                        </a>
+                      </td>
+                      <td>
+                        <a type="button" class="btn btn-danger btn-sm"
+                             href="{{route('admin.confirmcollection', ['id'=> $c->CollectionID])}}">
+                          <i class="bi bi-trash3"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+
 @endsection
