@@ -206,7 +206,19 @@ class AdminRepos
             $customer->address, $customer->CusID]);
     }
 
+    public static function insertcustomer($customer){
+        $sql = 'insert into customer ';
+        $sql .= '(name, dob, contact, email, address) ';
+        $sql .= 'values(?, ?, ?, ?, ?) ';
 
+        $result = DB::insert($sql, [$customer->name, $customer->dob, $customer->contact,
+            $customer->email, $customer->address]);
+        if ($result){
+            return DB::getPdo()->lastInsertID();
+        }else {
+            return -1;
+        }
+    }
 
 
 
