@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-12">
           <form method="post" action="{{route('admin.createproduct')}}"
-                autocomplete="off" class="form-horizontal">
+                autocomplete="off" class="form-horizontal" enctype="multipart/form-data">
             @csrf
 
             <div class="card ">
@@ -82,6 +82,10 @@
                     </div>
                   </div>
                 </div>
+                    <div class="row">
+                        <label class="col-sm-2 col-form-label">{{ __('Chose File') }}</label>
+                        <input type="file" name="image" class="col-sm-7">
+                    </div>
 
                   <div class="row">
                     <label class="col-sm-2 col-form-label">{{ __('Stylist') }}</label>

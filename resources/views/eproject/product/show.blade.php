@@ -7,7 +7,6 @@
           <form method="post" action="{{route('admin.showproduct', ['id' => old('id')?? $product->CID])}}"
                 autocomplete="off" class="form-horizontal">
             @csrf
-            @method('put')
 
             <div class="card ">
               <div class="card-header card-header-primary">
@@ -49,7 +48,10 @@
                   <dt class="col-sm-3">Urlimg</dt>
                   <dd class="col-sm-9"><img src="{{asset("images/product/".$product->urlimg)}}" width="350" height="400"></dd>
                 </dl>
-
+                    <a type="button" class="btn btn-info btn-sm"
+                       href="{{route('admin.productindex')}}">
+                        <span class="material-icons">Back</span>
+                    </a>
               </div>
             </div>
           </form>

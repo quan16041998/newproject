@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-md-12">
           <form method="post" action="{{route('admin.updateproduct', ['id' => old('id')?? $product->CID])}}"
-                autocomplete="off" class="form-horizontal">
+                autocomplete="off" class="form-horizontal" enctype="multipart/form-data">
             @csrf
             <div class="card ">
               <div class="card-header card-header-primary">
@@ -83,12 +83,16 @@
                     <div class="col-sm-7">
                       <div class="form-group">
                         <input class="form-control" name="urlimg" id="urlimg" type="text" placeholder="{{ __('urlimg') }}"
-                               value="{{old('urlimg')?? $product->urlimg}}"  /><input type="file" name="image"><br>
+                               value="{{old('urlimg')?? $product->urlimg}}" /><br>
                         <img src="{{asset($img.$product->urlimg)}}" width="350" height="400">
+
                       </div>
                     </div>
                   </div>
-
+                    <div class="row">
+                        <label class="col-sm-2 col-form-label">{{ __('Chose File') }}</label>
+                        <input type="file" name="image" class="col-sm-7">
+                    </div>
                   <div class="row">
                     <label class="col-sm-2 col-form-label">{{ __('Stylist') }}</label>
                     <div class="col-sm-7">
@@ -123,6 +127,7 @@
 
                 <div class="card-footer ml-auto mr-auto">
                   <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+
                 </div>
               </div>
             </div>

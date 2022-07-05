@@ -7,7 +7,6 @@
           <form method="post" action="{{route('admin.deleteproduct', ['id' => old('id')?? $product->CID])}}"
                 autocomplete="off" class="form-horizontal">
             @csrf
-            @method('put')
 
             <div class="card ">
               <div class="card-header card-header-primary">
@@ -51,7 +50,8 @@
                 </dl>
 
                   <div class="card-footer ml-auto mr-auto">
-                    <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                          <button type="submit" class="btn btn-danger">{{ __('Delete') }}</button>
+
                   </div>
               </div>
             </div>
