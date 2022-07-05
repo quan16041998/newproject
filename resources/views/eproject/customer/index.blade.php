@@ -1,45 +1,69 @@
-@extends('masters.adminmaster')
+@extends('masters.newmaster')
 
 @section('main')
-    @include('partials.allmessage')
-  <div class="card-body">
-    <div class="card mb-4">
-      <div class="card-header">
-        <i class="fas fa-table me-1"></i>
-        <h2>Customer Index</h2>
-      </div>
-      <div class="card-body">
-        <div class="dataTable-container">
-          <table id="datatablesSimple" class="dataTable-table table-success">
-            <thead>
-            <tr>
-              <th data-sortable="" style="width: 28.9432%;"><a>Customer name</a></th>
-              <th data-sortable="" style="width: 15.5337%;">dob</th>
-              <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
-              <th data-sortable="" style="width: 9.16091%;">&nbsp;</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($customer as $a)
-              <tr>
-                <td>{{$a->name}}</td>
-                <td>{{$a->dob}}</td>
-                <td><a type="button" class="btn btn-info btn-sm"
-                       href="{{route('admin.showcustomer',['id' => $a->CusID])}}">
-                    <i class="bi bi-eye"></i>
-                  </a>
-                </td>
-                <td><a type="button" class="btn btn-success btn-sm"
-                       href="{{route('admin.editcustomer',['id' => $a->CusID])}}">
-                    <i class="bi bi-pencil-square"></i>
-                  </a>
-                </td>
-              </tr>
-            @endforeach
-            </tbody>
-          </table>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title ">Simple Table</h4>
+              <p class="card-category"> Here is a subtitle for this table</p>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 text-right">
+                  <a href="#" class="btn btn-sm btn-primary">Add user</a>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Date Of Birth
+                  </th>
+                  <th>
+                    Detail
+                  </th>
+                  <th>
+                    Edit
+                  </th>
+                  </thead>
+                  <tbody>
+                  @foreach($customer as $a)
+                    <tr>
+                      <td>
+                        {{$a->name}}
+                      </td>
+                      <td>
+                        {{$a->dob}}
+                      </td>
+                      <td>
+                        <a type="button" class="btn btn-info btn-sm"
+                           href="{{route('admin.showcustomer',['id' => $a->CusID])}}">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                      </td>
+                      <td class="text-primary">
+                        <a type="button" class="btn btn-success btn-sm"
+                           href="{{route('admin.editcustomer',['id' => $a->CusID])}}">
+                          <i class="bi bi-pencil-square"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  @endforeach
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+
 @endsection
