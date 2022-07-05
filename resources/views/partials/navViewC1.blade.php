@@ -64,7 +64,7 @@
 {{--                    </form>--}}
                     <form class="navbar-form" method="get" action="{{route('viewC1.search')}}">
                         <div class="input-group no-border">
-                            <input type="text" value="" class="form-control" placeholder="Search...">
+                            <input type="text" value="" class="form-control"  name="search" placeholder="Search...">
                             <button type="submit" class="btn btn-white btn-round btn-just-icon">
                                 <i class="material-icons">search</i>
                                 <div class="ripple-container"></div>

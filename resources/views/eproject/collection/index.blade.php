@@ -24,9 +24,6 @@
                     Name
                   </th>
                   <th>
-                    Stylist
-                  </th>
-                  <th>
                     Detail
                   </th>
                   <th>
@@ -41,9 +38,6 @@
                     <tr>
                       <td>
                         {{$c->name}}
-                      </td>
-                      <td>
-                        {{$c->stylist}}
                       </td>
                       <td>
                         <a type="button" class="btn btn-info btn-sm"
