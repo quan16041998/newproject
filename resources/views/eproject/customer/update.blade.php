@@ -1,54 +1,152 @@
-@extends('masters.adminmaster')
-{{--daxong--}}
-@section('main')
-  <div class="container">
-    <h1 class="display-4">Update An Existing Customer</h1>
-    @include('partials.ErrorsAll')
+@extends('masters.newmaster')
 
-    <form action="{{route('admin.updatecustomer', ['id' => old('id')?? $customer->CusID])}}" method="post">
-      @csrf
-      <div class="card-body">
-        <div class="card mb-4">
-          <div class="card-header">
-            <i class="fas fa-table me-1"></i>
-          </div>
-          <div class="card-body">
-            <div class="dataTable-container">
-              <table id="datatablesSimple" class="dataTable-table">
-                <thead>
-                <tr><th><input type="hidden" name="id" value="{{old('id')?? $customer->CusID}}">
-                    <label for="name" class="font-weight-bold">Customer Name</label>
-                  <th><input type="text" class="form-control" id="name" name="name"
-                             value="{{old('name')?? $customer->name}}"></th>
-                </tr>
-                <tr>
-                  <th><label for="dob" class="font-weight-bold">dob</label></th>
-                  <th><input type="date" class="form-control" id="dob" name="dob"
-                             value="{{old('dob')?? $customer->dob}}"></th>
-                </tr>
-                <tr>
-                  <th><label for="contact" class="font-weight-bold">contact</label></th>
-                  <th> <input type="text" class="form-control" id="contact" name="contact"
-                              value="{{old('contact')?? $customer->contact}}" ></th>
-                </tr>
-                <tr>
-                  <th><label for="email" class="font-weight-bold">email</label></th>
-                  <th><input type="email" class="form-control" id="email" name="email"
-                             value="{{old('email')?? $customer->email}}" ></th>
-                </tr>
-                <tr>
-                  <th><label for="address" class="font-weight-bold">address</label></th>
-                  <th><input type="text" class="form-control" id="address" name="address"
-                             value="{{old('address')?? $customer->address}}" ></th>
-                </tr>
-                </thead>
-              </table>
+@section('main')
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          @include('partials.ErrorsAll')
+          <form method="get" action="{{route('admin.updatecustomer', ['id' => old('id')?? $customer->CusID])}}"
+                autocomplete="off" class="form-horizontal">
+            @csrf
+            @method('put')
+
+            <div class="card ">
+              <div class="card-header card-header-primary">
+                <h4 class="card-title">{{ __('Edit Profile') }}</h4>
+                <p class="card-category">{{ __('Customer information') }}</p>
+              </div>
+              <div class="card-body container">
+                @if (session('status'))
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <i class="material-icons">close</i>
+                        </button>
+                        <span>{{ session('status') }}</span>
+                      </div>
+                    </div>
+                  </div>
+                @endif
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">{{ __('Name') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group">
+                      <input class="form-control" name="name" id="name" type="text placeholder="{{ __('Name') }}"
+                      value="{{old('name')?? $customer->name}}" />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">{{ __('Data Of Birth') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group">
+                      <input class="form-control" name="dob" id="dob" type="date" placeholder="{{ __('DOB') }}"
+                             value="{{old('dob')?? $customer->dob}}"  />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">{{ __('Contact') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group">
+                      <input class="form-control" name="contact" id="contact" type="text" placeholder="{{ __('Contact') }}"
+                             value="{{old('contact')?? $customer->contact}}"  />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">{{ __('Email') }}</label>
+                  <div class="col-sm-7">
+                    <div class="form-group">
+                      <input class="form-control" name="email" id="input-email" type="email" placeholder="{{ __('Email') }}"
+                             value="{{old('email')?? $customer->email}}" />
+                    </div>
+                  </div>
+                </div>
+                  <div class="row">
+                    <label class="col-sm-2 col-form-label">{{ __('Address') }}</label>
+                    <div class="col-sm-7">
+                      <div class="form-group">
+                        <input class="form-control" name="address" id="input-address" type="address" placeholder="{{ __('Address') }}"
+                               value="{{old('address')?? $customer->address}}" />
+                      </div>
+                    </div>
+                  </div>
+                <div class="card-footer ml-auto mr-auto">
+                  <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                </div>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-    </form>
-    <button type="submit" class="btn btn-dark">Submit</button>
-    <a type="button" href="{{route('admin.customerindex')}}" class="btn btn-info">&lt;&lt;&nbsp;Back</a>
+    </div>
   </div>
+  {{--      <div class="row">--}}
+  {{--        <div class="col-md-12">--}}
+  {{--          <form method="post" action="{{ route('profile.password') }}" class="form-horizontal">--}}
+  {{--            @csrf--}}
+  {{--            @method('put')--}}
+
+  {{--            <div class="card ">--}}
+  {{--              <div class="card-header card-header-primary">--}}
+  {{--                <h4 class="card-title">{{ __('Change password') }}</h4>--}}
+  {{--                <p class="card-category">{{ __('Password') }}</p>--}}
+  {{--              </div>--}}
+  {{--              <div class="card-body ">--}}
+  {{--                @if (session('status_password'))--}}
+  {{--                  <div class="row">--}}
+  {{--                    <div class="col-sm-12">--}}
+  {{--                      <div class="alert alert-success">--}}
+  {{--                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
+  {{--                          <i class="material-icons">close</i>--}}
+  {{--                        </button>--}}
+  {{--                        <span>{{ session('status_password') }}</span>--}}
+  {{--                      </div>--}}
+  {{--                    </div>--}}
+  {{--                  </div>--}}
+  {{--                @endif--}}
+  {{--                <div class="row">--}}
+  {{--                  <label class="col-sm-2 col-form-label" for="input-current-password">{{ __('Current Password') }}</label>--}}
+  {{--                  <div class="col-sm-7">--}}
+  {{--                    <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">--}}
+  {{--                      <input class="form-control{{ $errors->has('old_password') ? ' is-invalid' : '' }}" input type="password" name="old_password" id="input-current-password" placeholder="{{ __('Current Password') }}" value="" required />--}}
+  {{--                      @if ($errors->has('old_password'))--}}
+  {{--                        <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('old_password') }}</span>--}}
+  {{--                      @endif--}}
+  {{--                    </div>--}}
+  {{--                  </div>--}}
+  {{--                </div>--}}
+  {{--                <div class="row">--}}
+  {{--                  <label class="col-sm-2 col-form-label" for="input-password">{{ __('New Password') }}</label>--}}
+  {{--                  <div class="col-sm-7">--}}
+  {{--                    <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">--}}
+  {{--                      <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="input-password" type="password" placeholder="{{ __('New Password') }}" value="" required />--}}
+  {{--                      @if ($errors->has('password'))--}}
+  {{--                        <span id="password-error" class="error text-danger" for="input-password">{{ $errors->first('password') }}</span>--}}
+  {{--                      @endif--}}
+  {{--                    </div>--}}
+  {{--                  </div>--}}
+  {{--                </div>--}}
+  {{--                <div class="row">--}}
+  {{--                  <label class="col-sm-2 col-form-label" for="input-password-confirmation">{{ __('Confirm New Password') }}</label>--}}
+  {{--                  <div class="col-sm-7">--}}
+  {{--                    <div class="form-group">--}}
+  {{--                      <input class="form-control" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('Confirm New Password') }}" value="" required />--}}
+  {{--                    </div>--}}
+  {{--                  </div>--}}
+  {{--                </div>--}}
+  {{--              </div>--}}
+  {{--              <div class="card-footer ml-auto mr-auto">--}}
+  {{--                <button type="submit" class="btn btn-primary">{{ __('Change password') }}</button>--}}
+  {{--              </div>--}}
+  {{--            </div>--}}
+  {{--          </form>--}}
+  {{--        </div>--}}
+  {{--      </div>--}}
+  {{--    </div>--}}
+  {{--  </div>--}}
 @endsection
