@@ -53,19 +53,19 @@
                       <td>
                         <a type="button" class="btn btn-info btn-sm"
                            href="{{route('admin.showstylist',['id' => $s->SID])}}">
-                          <i class="bi bi-eye"></i>
+                          <span class="material-icons">visibility</span>
                         </a>
                       </td>
                       <td class="text-primary">
                         <a type="button" class="btn btn-success btn-sm"
                            href="{{route('admin.editstylist',['id' => $s->SID])}}">
-                          <i class="bi bi-pencil-square"></i>
+                          <span class="material-icons">edit</span>
                         </a>
                       </td>
                       <td class="text-primary">
                         <a type="button" class="btn btn-danger btn-sm"
                            href="{{route('admin.deletestylist',['id' => $s->SID])}}">
-                          <i class="bi bi-pencil-square"></i>
+                          <span class="material-icons">delete</span>
                         </a>
                       </td>
                     </tr>
