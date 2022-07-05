@@ -4,9 +4,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="get" action="{{route('admin.deletecollection', ['id' => old('id')?? $collection->CollectionID ])}}" autocomplete="off" class="form-horizontal">
+          <form method="post" action="{{route('admin.deletecollection', ['id' => old('id')?? $collection->CollectionID ])}}"
+                autocomplete="off" class="form-horizontal" enctype="multipart/form-data">
             @csrf
-            @method('put')
 
             <div class="card ">
               <div class="card-header card-header-primary">

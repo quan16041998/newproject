@@ -2,11 +2,14 @@
 
 @section('main')
   <div class="content">
+    @include('partials.ErrorsAll')
+    @include('partials.sessionmessage')
+    @include('partials.allmessage')
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="get" action="{{route('admin.updatestylist', ['id' => old('id')?? $stylist->SID])}}"
-                autocomplete="off" class="form-horizontal">
+          <form method="post" action="{{route('admin.updatestylist', ['id' => old('id')?? $stylist->SID])}}"
+                autocomplete="off" class="form-horizontal" enctype="multipart/form-data">
             @csrf
             <div class="card ">
               <div class="card-header card-header-primary">
@@ -26,11 +29,14 @@
                     </div>
                   </div>
                 @endif
+
+                  <input type="hidden" name="id" value="{{$stylist->SID}}">
+
                 <div class="row">
                   <label class="col-sm-2 col-form-label">{{ __('Stylist name') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="name" id="name" type="text placeholder="{{ __('Name') }}"
+                      <input class="form-control" name="name" id="name" type="text"
                       value="{{old('name')?? $stylist->name}}" />
                     </div>
                   </div>
@@ -39,7 +45,7 @@
                   <label class="col-sm-2 col-form-label">{{ __('Data Of Birth') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="dob" id="dob" type="date" placeholder="{{ __('DOB') }}"
+                      <input class="form-control" name="dob" id="dob" type="date"
                              value="{{old('dob')?? $stylist->dob}}"  />
                     </div>
                   </div>
@@ -49,7 +55,7 @@
                   <label class="col-sm-2 col-form-label">{{ __('Contact') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="contact" id="contact" type="text" placeholder="{{ __('Contact') }}"
+                      <input class="form-control" name="contact" id="contact" type="text"
                              value="{{old('contact')?? $stylist->contact}}"  />
                     </div>
                   </div>
@@ -58,7 +64,7 @@
                   <label class="col-sm-2 col-form-label">{{ __('Email') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="email" id="input-email" type="email" placeholder="{{ __('Email') }}"
+                      <input class="form-control" name="email" id="email" type="email"
                              value="{{old('email')?? $stylist->email}}" />
                     </div>
                   </div>
@@ -67,7 +73,7 @@
                   <label class="col-sm-2 col-form-label">{{ __('History') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="text" id="input-history" type="history" placeholder="{{ __('history') }}"
+                      <input class="form-control" name="history" id="history" type="text"
                              value="{{old('history')?? $stylist->history}}" />
                     </div>
                   </div>
@@ -88,6 +94,10 @@
                         <img src="{{asset($img.$stylist->urlimg)}}" width="350" height="400">
                       </div>
                     </div>
+                  </div>
+                  <div class="row">
+                    <label class="col-sm-2 col-form-label">{{ __('Chose File') }}</label>
+                    <input type="file" name="image" class="col-sm-7">
                   </div>
                 <div class="card-footer ml-auto mr-auto">
                   <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
