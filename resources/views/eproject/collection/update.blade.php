@@ -63,7 +63,10 @@
                     </div>
                   </div>
 
-
+                   <div class="row">
+                    <label class="col-sm-2 col-form-label">{{ __('Chose File') }}</label>
+                    <input type="file" name="image" class="col-sm-7">
+                  </div>
 
                 <div class="row">
                   <label class="col-sm-2 col-form-label">{{ __('introduce') }}</label>
