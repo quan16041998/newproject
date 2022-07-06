@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 use App\Models\User;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Session;
 
 class ViewC1ControllerWithRepos extends Controller
 {
@@ -94,23 +95,29 @@ class ViewC1ControllerWithRepos extends Controller
     public function collection(){
 
     }
-   
-    
+
+
      public function stylist($id){
-        $stylist = AdminRepos::getstylistbyid($id);
-        return view('eproject.viewC1.viewstylist',[
-            'stylist' => $stylist[0]
-        ]);
+         $collection = AdminRepos::getallcollection();
+         $stylist = AdminRepos::getallstylist();
+         $stylistname = AdminRepos::getstylistbyid($id);
+         $collectionname = AdminRepos::getCollectionbySID($id);
+         return view('eproject.viewC1.stylist',[
+             'collection' => $collection,
+             'stylist' => $stylist,
+             'stylistname'=> $stylistname[0],
+             'collectionname' => $collectionname[0]
+         ]);
 
     }
 
-    
-     public function login(){
-        return view('eproject.viewC1.login');
+
+     public function login(Request $request){
+         Session::put('username', $request->input('username'));
+         return redirect()->route('viewC1.index');
     }
 
     public function signupcus(){
-        $customer = AdminRepos::getAllCustomer();
         return view('eproject.viewC1.signup',
         [
           'customer' =>(object)[
@@ -119,8 +126,7 @@ class ViewC1ControllerWithRepos extends Controller
               'contact' => '',
               'email' => '',
               'address' => ''
-          ],
-            'customer' => $customer
+          ]
         ]);
     }
 

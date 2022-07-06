@@ -19,7 +19,7 @@
         <div class="image-holder">
             <img src="{{asset('images/registration-form-1.jpg')}}" alt="">
         </div>
-        <form action="{{route('viewC1.signup')}}}">
+        <form action="{{route('viewC1.storecus')}}}">
             <h3>Registration Form</h3>
             <div class="form-wrapper">
                 <input type="text" placeholder="Name" class="form-control">

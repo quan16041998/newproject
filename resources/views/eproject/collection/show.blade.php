@@ -29,11 +29,10 @@
                 <dl class="row">
                   <dt class="col-sm-3">Name</dt>
                   <dd class="col-sm-9">{{ $collection->name }}</dd>
+                    <dt class="col-sm-3">IMG</dt>
+                    <dd class="col-sm-9"> <img src="{{asset("images/collection/".$collection->urlimg)}}" width="350" height="400"></dd>
 
-                  <dt class="col-sm-3">Stylist</dt>
-                  <dd class="col-sm-9">{{ $collection->stylist }}</dd>
-
-                  <dt class="col-sm-3">Introduct</dt>
+                    <dt class="col-sm-3">Introduct</dt>
                   <dd class="col-sm-9">{{ $collection->introduce  }}</dd>
 
                 </dl>

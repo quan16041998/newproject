@@ -22,7 +22,7 @@
         <form action="{{route('viewC1.login')}}" method="get">
             <h3>Welcome</h3>
             <div class="form-wrapper">
-                <input type="text" placeholder="Email" class="form-control" value="{{old('email')?? null}}">
+                <input type="text" placeholder="Email" name="username" class="form-control" value="{{old('email')?? null}}">
                 <i class="zmdi zmdi-account"></i>
             </div>
             <div class="form-wrapper">
@@ -30,13 +30,14 @@
                 <i class="zmdi zmdi-lock"></i>
             </div>
 
-            <button>Login
-                <i class="zmdi zmdi-arrow-right"></i>
+            <button style="background-color: greenyellow">
+                <a class="btn btn-light" href="{{route('viewC1.signupcus')}}" >
+                    LogIn<i class="zmdi zmdi-arrow-right"></i>
+                </a>
             </button>
-            <button>
-                SignUp
-                <a class="btn btn-dark"  type="button" href="{{route('viewC1.signup')}}">
-                    <i class="zmdi zmdi-arrow-right"></i>
+            <button style="background-color: greenyellow" >
+                <a class="btn btn-light" href="{{route('viewC1.signupcus')}}" >
+                    SignUp<i class="zmdi zmdi-arrow-right"></i>
                 </a>
             </button>
 

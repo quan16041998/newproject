@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-md-12">
           <form method="post" action="{{route('admin.updatecollection', ['id' => old('id')?? $collection->CollectionID])}}"
-                autocomplete="off" class="form-horizontal">
+                autocomplete="off" class="form-horizontal" enctype="multipart/form-data">
             @csrf
             <div class="card ">
               <div class="card-header card-header-primary">
@@ -38,16 +38,6 @@
                     <div class="form-group">
                       <input class="form-control" name="name" id="name" type="text"
                       value="{{old('name')?? $collection->name}}" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <label class="col-sm-2 col-form-label">{{ __('Stylist') }}</label>
-                  <div class="col-sm-7">
-                    <div class="form-group">
-                      <input class="form-control" name="stylist" id="stylist" type="text"
-                             value="{{old('stylist')?? $collection->stylist}}"  />
                     </div>
                   </div>
                 </div>

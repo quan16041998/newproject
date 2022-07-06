@@ -80,7 +80,7 @@
             </header>
             <div class="row">
                 @foreach($stylist as $s)
-                    <div class="col-lg-4"><a class="category-item" href="{{route('viewC1.shop')}}">
+                    <div class="col-lg-4"><a class="category-item" href="{{route('viewC1.stylist', ['id' => $s->SID])}}">
                             <img   width="200px"  height="250px" src="{{asset("images/stylist/".$s->urlimg)}}" alt=""/>
                             <strong class="category-item-title ">{{$s->name}}</strong></a>
                     </div>

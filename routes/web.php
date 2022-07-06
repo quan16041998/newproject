@@ -253,11 +253,7 @@ Route::group(['prefix' => 'viewC1'], function (){
         'uses' => 'ViewC1ControllerWithRepos@viewcollection',
         'as' => 'viewC1.viewcollection'
     ]);
-    Route::get('collection',[
-        'uses' => 'ViewC1ControllerWithRepos@collection',
-        'as' => 'viewC1.collection'
-    ]);
-    Route::get('stylist',[
+    Route::get('stylist/{id}',[
         'uses' => 'ViewC1ControllerWithRepos@stylist',
         'as' => 'viewC1.stylist'
     ]);
@@ -280,7 +276,11 @@ Route::group(['prefix' => 'viewC1'], function (){
     ]);
 
     Route::get('signup',[
-        'uses' => 'ViewC1ControllerWithRepos@signup',
-        'as' => 'viewC1.signup'
+        'uses' => 'ViewC1ControllerWithRepos@signupcus',
+        'as' => 'viewC1.signupcus'
+    ]);
+    Route::post('signup',[
+        'uses' => 'ViewC1ControllerWithRepos@storecus',
+        'as' => 'viewC1.storecus'
     ]);
 });

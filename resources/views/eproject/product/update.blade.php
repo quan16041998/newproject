@@ -1,10 +1,10 @@
 @extends('masters.newmaster')
 
 @section('main')
-    @include('partials.ErrorsAll')
-    @include('partials.sessionmessage')
-    @include('partials.allmessage')
   <div class="content">
+      @include('partials.ErrorsAll')
+      @include('partials.sessionmessage')
+      @include('partials.allmessage')
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -97,7 +97,7 @@
                     <label class="col-sm-2 col-form-label">{{ __('Stylist') }}</label>
                     <div class="col-sm-7">
                       <div class="form-group">
-                        <select name="stylist" class="form-control" id="stylist" required>
+                        <select name="SID" class="form-control" id="stylist">
                           <option value="0">Please select a stylist :)</option>
                           @foreach($stylist as $s)
                             <option value="{{ $s->SID }}"
@@ -113,7 +113,7 @@
                     <label class="col-sm-2 col-form-label">{{ __('Collection') }}</label>
                     <div class="col-sm-7">
                       <div class="form-group">
-                        <select name="collection" class="form-control" id="collection">
+                        <select name="CollectionID" class="form-control" id="collection">
                           <option value="0">Please select a Collection :)</option>
                           @foreach($collection as $c)
                             <option value="{{ $c->CollectionID }}"

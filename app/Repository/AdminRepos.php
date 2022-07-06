@@ -279,7 +279,13 @@ class AdminRepos
             return -1;
         }
     }
+    public static function  getCollectionbySID($id){
+        $sql = "select CollectionID ";
+        $sql .="from product ";
+        $sql .= "where SID = ? ";
 
+        return DB::select($sql, [$id]);
+    }
     public static function getcollectionbyProductid($id){
         $sql = "select c.* ";
         $sql .="from collection as c ";

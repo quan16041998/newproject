@@ -196,7 +196,6 @@ class AdminControllerWithRepos extends Controller
             'name'=>$request->input('name'),
             'urlimg'=>$request->input('urlimg'),
             'introduce'=>$request->input('introduce'),
-            'stylist'=>$request->input('stylist')
         ];
         if($request->hasFile('image')){
             $image = $request->file('image');
@@ -544,8 +543,8 @@ class AdminControllerWithRepos extends Controller
             'price' => $request->input('price'),
             'size' => $request->input('size'),
             'urlimg' => $request->input('urlimg'),
-            'CollectionID' => $request->input('collection'),
-            'SID' => $request->input('stylist')
+            'CollectionID' => $request->input('CollectionID'),
+            'SID' => $request->input('SID')
         ];
         if($request->hasFile('image')){
             $image = $request->file('image');
