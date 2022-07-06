@@ -94,9 +94,16 @@ class ViewC1ControllerWithRepos extends Controller
     public function collection(){
 
     }
-    public function stylist(){
+   
+    
+     public function stylist($id){
+        $stylist = AdminRepos::getstylistbyid($id);
+        return view('eproject.viewC1.viewstylist',[
+            'stylist' => $stylist[0]
+        ]);
 
     }
+
     
      public function login(){
         return view('eproject.viewC1.login');
