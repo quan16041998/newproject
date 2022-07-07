@@ -12,7 +12,9 @@
                                     </div>
 
                                     <h2 class="h4 text-center" id="show1">MD_QA01</h2>
-                                    <p class="text-muted">1500$</p>
+                                    <p class="text-muted">fabric: velvet</p>
+                                    <p class="text-muted">price: 1500$</p>
+                                    <p class="text-muted">size: 28</p>
                                     <p class="text-sm mb-4"></p>
                                     <a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>QTK</a>
 
@@ -28,7 +30,9 @@
 
                                     </div>
                                     <h2 class="h4" id="show1">MH_QA09</h2>
-                                    <p class="text-muted">$1500</p>
+                                    <p class="text-muted">fabric: cotton</p>
+                                    <p class="text-muted">price: 2500$</p>
+                                    <p class="text-muted">size: 28</p>
                                     <p class="text-sm mb-4"></p>
 
                                     <a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>QTK</a>
