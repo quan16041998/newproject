@@ -34,8 +34,7 @@
                                     <p class="text-sm">Size: L</p>
                                     <p class="text-sm">Collection: Summer 2022</p>
                                     <p class="text-sm">Stylist: Do Khac Duong</p>
-                                    <p class="text-sm mb-4"></p>
-
+                                    <p class="text-sm"></p>
                                     <a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>QTK</a>
                                 </div>
 
