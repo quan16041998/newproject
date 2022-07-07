@@ -1,6 +1,6 @@
 @extends('masters.viewC1master')
 @section('main')
-
+ @include('partials.modal')
     <div class="container">
         <!-- HERO SECTION-->
         <section class="py-5 bg-light" style="background: url({{asset("images/phong/phong3.jpg")}})">
@@ -118,7 +118,7 @@
                                                     <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
                                                     <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
                                                     <li class="list-inline-item mr-0">
-                                                        <a class="btn btn-sm btn-outline-dark" href="#productView" data-toggle="modal">
+                                                        <a class="btn btn-sm btn-outline-dark" href="#sosanh" data-toggle="modal">
                                                             <i class="fas fa-expand"></i></a></li>
                                                 </ul>
                                             </div>
