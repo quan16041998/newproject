@@ -19,37 +19,39 @@
         <div class="image-holder">
             <img src="{{asset('images/registration-form-1.jpg')}}" alt="">
         </div>
-        <form action="{{route('viewC1.storecus')}}}">
+        <form action="{{route('viewC1.storecus')}}" method="post">
+            @csrf
             <h3>Registration Form</h3>
             <div class="form-wrapper">
-                <input type="text" placeholder="Name" class="form-control">
-            </div>
-            <div class="form-wrapper">
-                <input type="text" placeholder="Email Address" class="form-control">
-                <i class="zmdi zmdi-email"></i>
-            </div>
-            <div class="form-wrapper">
-                <input type="date" placeholder="Date of birth" class="form-control">
-                <i class="zmdi zmdi-lock"></i>
-            </div>
-            <div class="form-wrapper">
-                <input type="number" placeholder="Contact" class="form-control">
-                <i class="zmdi zmdi-lock"></i>
-            </div>
-            <div class="form-wrapper">
-                <input type="text" placeholder="Address" class="form-control">
-                <i class="zmdi zmdi-lock"></i>
+                <input type="text" placeholder="Username" class="form-control">
             </div>
             <div class="form-wrapper">
                 <input type="password" placeholder="Password" class="form-control">
                 <i class="zmdi zmdi-lock"></i>
             </div>
             <div class="form-wrapper">
-                <input type="password" placeholder="Confirm  Password" class="form-control">
+                <input type="text" placeholder="Name" class="form-control" name="name">
+            </div>
+            <div class="form-wrapper">
+                <input type="text" placeholder="Email Address" class="form-control" name="email">
+                <i class="zmdi zmdi-email"></i>
+            </div>
+            <div class="form-wrapper">
+                <input type="date" placeholder="Date of birth" class="form-control" name="dob">
                 <i class="zmdi zmdi-lock"></i>
             </div>
-            <button>Register
-                <i class="zmdi zmdi-arrow-right"></i>
+            <div class="form-wrapper">
+                <input type="number" placeholder="Contact" class="form-control" name="contact">
+                <i class="zmdi zmdi-lock"></i>
+            </div>
+            <div class="form-wrapper">
+                <input type="text" placeholder="Address" class="form-control" name="address">
+                <i class="zmdi zmdi-lock"></i>
+            </div>
+            <button style="background-color: greenyellow" type="submit">
+                <a class="btn btn-light"  >
+                    Register<i class="zmdi zmdi-arrow-right"></i>
+                </a>
             </button>
         </form>
     </div>

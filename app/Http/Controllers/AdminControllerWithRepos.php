@@ -393,8 +393,8 @@ class AdminControllerWithRepos extends Controller
         );
     }
     public function deletestylist(Request $request, $id){
-        if ($request->input('SID') != $id){
-            return redirect()->action('AdminControllerWithRepos@stylistindex');
+        if ($request->input('id') != $id){
+            return redirect()->action('AdminControllerWithRepos@stylistindex') ->with('msgs', 'Delete  not Successfully');;
         }
 
         AdminRepos::deletestylist($id);
@@ -411,8 +411,7 @@ class AdminControllerWithRepos extends Controller
                 'dob' => ['required'],
                 'contact' => ['required'],
                 'email' => ['required'],
-                'history' => ['required'],
-                'urlimg' => ['required']
+                'history' => ['required']
             ],
             [
                 'name.required' => 'Stylist name can not be empty',

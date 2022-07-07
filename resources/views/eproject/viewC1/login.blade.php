@@ -13,25 +13,28 @@
 </head>
 
 <body>
-
+@include('partials.ErrorsAll')
+@include('partials.sessionmessage')
+@include('partials.allmessage')
 <div class="wrapper" style="background-image: url({{asset('images/bg-registration-form-1.jpg')}});">
     <div class="inner">
         <div class="image-holder">
             <img src="{{asset('images/registration-form-1.jpg')}}" alt="">
         </div>
-        <form action="{{route('viewC1.login')}}" method="get">
+        <form action="{{route('viewC1.login')}}" method="post">
+            @csrf
             <h3>Welcome</h3>
             <div class="form-wrapper">
-                <input type="text" placeholder="Email" name="username" class="form-control" value="{{old('email')?? null}}">
+                <input type="text" placeholder="Email" name="username" class="form-control" value="{{old('username')?? null}}">
                 <i class="zmdi zmdi-account"></i>
             </div>
             <div class="form-wrapper">
-                <input type="password" placeholder="Password" class="form-control">
+                <input type="password" placeholder="Password" class="form-control" name="password">
                 <i class="zmdi zmdi-lock"></i>
             </div>
 
-            <button style="background-color: greenyellow">
-                <a class="btn btn-light" href="{{route('viewC1.signupcus')}}" >
+            <button style="background-color: greenyellow" type="submit">
+                <a class="btn btn-light"  >
                     LogIn<i class="zmdi zmdi-arrow-right"></i>
                 </a>
             </button>

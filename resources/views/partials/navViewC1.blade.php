@@ -49,19 +49,24 @@
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item "><a class="nav-link" href="{{route('viewC1.cart')}}"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a></li>
-                        <li class="nav-item "><a class="nav-link" href="{{route('viewC1.login')}}"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Login</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">person</i>
+                                <p class="d-lg-none d-md-block">
+                                    {{ __('Account') }}
+                                </p>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                                <a href="{{route('viewC1.ask')}}" class="dropdown-item"> <i class="material-icons">person</i>{{\Illuminate\Support\Facades\Session::has('username')?
+                           \Illuminate\Support\Facades\Session::get('username') : ''}}</a>
+                                <a class="dropdown-item" href="{{route('viewC1.signout')}}">{{ __('Log out') }}</a>
+                                <a class="dropdown-item" href="{{route('viewC1.signupcus')}}">{{ __('Sign Up') }}</a>
+                                <div class="dropdown-divider"></div>
+
+                            </div>
+                        </li>
                     </ul>
-{{--                    <div class="col-lg-2 input-group-sm">--}}
-{{--                        <form class="form-inline row">--}}
-{{--                            <input class="form-control-sm " type="search" placeholder="Product Code" aria-label="Search"  aria-label="Recipient's username" aria-describedby="basic-addon2">--}}
-{{--                        </form>--}}
-{{--                    </div>--}}
-{{--                    <form class="input-group mb-3 col-lg-2 form-inline" method="get" action="{{route('viewC1.search')}}">--}}
-{{--                        <input type="text" class="form-control form-control-sm " placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2" name="search">--}}
-{{--                        <div class="input-group-append">--}}
-{{--                            <button type="submit" class="btn-outline-warning"><i class="bi-search"></i> </button>--}}
-{{--                        </div>--}}
-{{--                    </form>--}}
+
                     <form class="navbar-form" method="get" action="{{route('viewC1.search')}}">
                         <div class="input-group no-border">
                             <input type="text" value="" class="form-control"  name="search" placeholder="Search...">

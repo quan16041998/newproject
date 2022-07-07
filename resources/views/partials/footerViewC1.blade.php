@@ -1,7 +1,7 @@
 <footer class="bg-dark text-white reset-anchor">
     <div class="container py-4">
         <div class="row py-5">
-            <div class="col-md-4 mb-3 mb-md-0">
+            <div class="col-md-3 mb-3 mb-md-0">
                 <h6 class="text-uppercase mb-3">Customer services</h6>
                 <ul class="list-unstyled mb-0">
                     <li><a class="text-white reset-anchor" style=" text-decoration: none" href="#!">Help &amp; Contact Us</a></li>
@@ -10,7 +10,7 @@
                     <li><a class="text-white reset-anchor" style=" text-decoration: none" href="#!">Terms &amp; Conditions</a></li>
                 </ul>
             </div>
-            <div class="col-md-4 mb-3 mb-md-0">
+            <div class="col-md-3 mb-3 mb-md-0">
                 <h6 class="text-uppercase mb-3">Company</h6>
                 <ul class="list-unstyled mb-0">
                     <li><a class="text-white reset-anchor test" href="#!">What We Do</a></li>
@@ -19,7 +19,7 @@
                     <li><a class="text-white reset-anchor" style=" text-decoration: none" href="#!">FAQs</a></li>
                 </ul>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h6 class="text-uppercase mb-3">Social media</h6>
                 <ul class="list-unstyled mb-0">
                     <li><a class="text-white reset-anchor" style=" text-decoration: none" href="https://twitter.com/?lang=vi">Twitter</a></li>

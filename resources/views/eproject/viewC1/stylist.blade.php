@@ -15,7 +15,6 @@
                 <!-- SHOP SIDEBAR-->
                 <div class="col-lg-3 order-2 order-lg-1">
                     <h5 class="text-uppercase mb-4">Categories</h5>
-                    <div class="py-2 px-4 bg-dark text-white mb-3"><strong class="small text-uppercase fw-bold">Fashion &amp; Acc</strong></div>
                     <ul class="list-unstyled small text-muted ps-lg-4 font-weight-normal">
                         @foreach($collection as $c)
                             <li class="mb-2"><a class="reset-anchor" href="{{route('viewC1.viewcollection', ['id' => $c->CollectionID])}}">{{$c->name}}</a></li>

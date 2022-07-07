@@ -8,7 +8,10 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 use App\Models\User;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
+use PhpOffice\PhpWord\PhpWord;
+use PhpOffice\PhpWord\IOFactory;
 
 class ViewC1ControllerWithRepos extends Controller
 {
@@ -110,17 +113,26 @@ class ViewC1ControllerWithRepos extends Controller
          ]);
 
     }
+    public function ask(){
+        return view('eproject.viewC1.login');
 
+    }
 
      public function login(Request $request){
          Session::put('username', $request->input('username'));
          return redirect()->route('viewC1.index');
     }
+    public function signout(){
+        if (Session::has('username')){
+            Session::forget('username');
+        }
+        return redirect()->action('ViewC1ControllerWithRepos@ask');
+    }
 
     public function signupcus(){
         return view('eproject.viewC1.signup',
         [
-          'customer' =>(object)[
+          "customer" =>(object)[
               'name' => '',
               'dob' => '',
               'contact' => '',
@@ -131,7 +143,7 @@ class ViewC1ControllerWithRepos extends Controller
     }
 
     public function storecus(Request $request){
-        $this->formcustomerValidate($request)->validate();
+        $this->formcustomerVailidate($request)->validate();
 
         $customer = (object)[
             'name'=>$request->input('name'),
@@ -141,9 +153,24 @@ class ViewC1ControllerWithRepos extends Controller
             'address'=>$request->input('address')
         ];
 
-        $newid = AdminRepos::insertcustomer($customer);
-        return redirect()->action('ViewC1ControllerWithRepos@login')->
-        with('msg', 'New customer with id: ' . $newid . ' has been inserted');
+       AdminRepos::insertcustomer($customer);
+        return redirect()->action('ViewC1ControllerWithRepos@ask')->
+        with('msg', 'You have successfully registered');
+    }
+
+    public function download(Request $request){
+            $phpWord = new PhpWord();
+            $section = $phpWord->addSection();
+            $section->addText($request->get('product_code'));
+           $section->addText($request->get('fabric'));
+           $section->addText($request->get('price'));
+           $section->addText($request->get('size'));
+           $section->addText($request->get('collection'));
+            $section->addText($request->get('stylist'));
+            $section->addImage($request->get('img'));
+            $objWriter = IOFactory::createWriter($phpWord, 'Word2007');
+            $objWriter->save('Information.docx');
+            return response()->download(public_path('Information.docx'));
     }
 
 

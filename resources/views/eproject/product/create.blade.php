@@ -81,7 +81,7 @@
                   <div class="col-sm-7">
                     <div class="form-group">
                       <input type="text" class="form-control" id="urlimg" name="urlimg"
-                             value="{{old('urlimg')?? $product->urlimg?? null}}"><input type="file" name="image"><br>
+                             value="{{old('urlimg')?? $product->urlimg?? null}}">
                       <img src="{{asset($img.$product->urlimg)}}" width="350" height="400">
                     </div>
                   </div>

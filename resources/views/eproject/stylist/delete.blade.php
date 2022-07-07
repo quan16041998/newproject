@@ -48,7 +48,7 @@
 
                 </dl>
                   <div class="card-footer ml-auto mr-auto">
-                    <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                    <button type="submit" class="btn btn-danger">{{ __('Delete') }}</button>
                   </div>
               </div>
             </div>

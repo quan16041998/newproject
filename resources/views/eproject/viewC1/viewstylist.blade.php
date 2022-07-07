@@ -9,14 +9,6 @@
                     <div class="col-lg-6">
                         <h1 class="h2 text-uppercase mb-0" style="color: #dcb14a;">{{$stylistname->name}}</h1>
                     </div>
-                    {{--                    <div class="col-lg-6 text-lg-end">--}}
-                    {{--                        <nav aria-label="breadcrumb">--}}
-                    {{--                            <ol class="breadcrumb justify-content-lg-end mb-0 px-0 bg-light">--}}
-                    {{--                                <li class="breadcrumb-item"><a class="text-dark" href="{{route('viewC1.index')}}">Home</a></li>--}}
-                    {{--                                <li class="breadcrumb-item active" aria-current="page">Stylist</li>--}}
-                    {{--                            </ol>--}}
-                    {{--                        </nav>--}}
-                    {{--                    </div>--}}
                 </div>
             </div>
         </section>
@@ -149,8 +141,6 @@
 @endsection
 @section('script')
     <script>
-        $('#productView').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        })
+        $('#sosanh').modal()
     </script>
 @endsection

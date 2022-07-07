@@ -2,14 +2,15 @@
 
 @section('main')
   <div class="content">
+      @include('partials.ErrorsAll')
+      @include('partials.sessionmessage')
+      @include('partials.allmessage')
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="get" action="{{route('admin.createstylist', ['id' => old('id')?? $stylist->SID])}}"
-                autocomplete="off" class="form-horizontal">
+          <form method="post" action="{{route('admin.createstylist')}}"
+                autocomplete="off" class="form-horizontal" enctype="multipart/form-data">
             @csrf
-            @method('put')
-
             <div class="card ">
               <div class="card-header card-header-primary">
                 <h4 class="card-title">{{ __('Create Profile') }}</h4>
@@ -69,13 +70,26 @@
                   <label class="col-sm-2 col-form-label">{{ __('History') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="text" id="input-history" type="history" placeholder="{{ __('history') }}"
-                             value="{{old('history')?? $stylist->history}}" />
+                      <input class="form-control" name="history" id="input-history" type="history" placeholder="{{ __('history') }}"
+                             value="{{old('history')?? $stylist->history}}"/>
                     </div>
                   </div>
                 </div>
+                    <div class="row">
+                        <label class="col-sm-2 col-form-label">{{ __('Urlimg') }}</label>
+                        <div class="col-sm-7">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="urlimg" name="urlimg"
+                                       value="{{old('urlimg')?? $stylist->urlimg?? null}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-2 col-form-label">{{ __('Chose File') }}</label>
+                        <input type="file" name="image" class="col-sm-7">
+                    </div>
                 <div class="card-footer ml-auto mr-auto">
-                  <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                  <button type="submit" class="btn btn-primary">{{ __('Create') }}</button>
                 </div>
               </div>
             </div>

@@ -29,10 +29,6 @@ Route::group(['prefix'=>'auth'],function (){
         'uses' => 'AdminControllerWithRepos@signin',
         'as' => 'admin.signin'
     ]);
-    Route::post('test', [
-        'uses' => 'AdminControllerWithRepos@test',
-        'as' => 'admin.test'
-    ]);
     Route::get('logout', [
         'uses' => 'AdminControllerWithRepos@signout',
         'as' => 'admin.signout'
@@ -271,10 +267,13 @@ Route::group(['prefix' => 'viewC1'], function (){
         'as' => 'viewC1.search'
     ]);
     Route::get('login', [
+        'uses' => 'ViewC1ControllerWithRepos@ask',
+        'as' => 'viewC1.ask'
+    ]);
+    Route::post('login', [
         'uses' => 'ViewC1ControllerWithRepos@login',
         'as' => 'viewC1.login'
     ]);
-
     Route::get('signup',[
         'uses' => 'ViewC1ControllerWithRepos@signupcus',
         'as' => 'viewC1.signupcus'
@@ -282,5 +281,13 @@ Route::group(['prefix' => 'viewC1'], function (){
     Route::post('signup',[
         'uses' => 'ViewC1ControllerWithRepos@storecus',
         'as' => 'viewC1.storecus'
+    ]);
+    Route::get('signout', [
+        'uses' => 'ViewC1ControllerWithRepos@signout',
+        'as' => 'viewC1.signout'
+    ]);
+    Route::post('download',[
+        'uses' => 'ViewC1ControllerWithRepos@download',
+        'as' => 'viewC1.download'
     ]);
 });
