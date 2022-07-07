@@ -1,6 +1,6 @@
 @extends('masters.viewC1master')
 @section('main')
-
+ @include('partials.modal')
     <div class="container">
         <!-- HERO SECTION-->
                     <section class="py-5 bg-light" style="background: url({{asset("images/phong/phong05.jpg")}})">
