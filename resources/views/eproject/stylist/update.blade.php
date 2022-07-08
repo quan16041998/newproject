@@ -89,7 +89,7 @@
                     <label class="col-sm-2 col-form-label">{{ __('Urlimg') }}</label>
                     <div class="col-sm-7">
                       <div class="form-group">
-                        <input class="form-control" name="urlimg" id="input-history" type="urlimg" placeholder="{{ __('urlimg') }}"
+                        <input type="hidden" class="form-control" name="urlimg" id="input-history"
                                value="{{old('urlimg')?? $stylist->urlimg}}" /><input type="file" name="image"><br>
                         <img src="{{asset($img.$stylist->urlimg)}}" width="350" height="400">
                       </div>
