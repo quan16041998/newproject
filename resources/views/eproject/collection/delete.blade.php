@@ -1,6 +1,9 @@
 @extends('masters.newmaster')
 @section('main')
   <div class="content">
+      @include('partials.ErrorsAll')
+      @include('partials.sessionmessage')
+      @include('partials.allmessage')
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -29,16 +32,14 @@
                 <dl class="row">
                   <dt class="col-sm-3">Name</dt>
                   <dd class="col-sm-9">{{ $collection->name }}</dd>
+                    <dt class="col-sm-3">Introduct</dt>
+                    <dd class="col-sm-9">{{ $collection->introduce  }}</dd>
                     <dt class="col-sm-3">IMG</dt>
                     <dd class="col-sm-9"> <img src="{{asset("images/collection/".$collection->urlimg)}}" width="350" height="400"></dd>
 
-
-                    <dt class="col-sm-3">Introduct</dt>
-                  <dd class="col-sm-9">{{ $collection->introduce  }}</dd>
-
                 </dl>
                   <div class="card-footer ml-auto mr-auto">
-                    <button type="submit" class="btn btn-primary">{{ __('Delete') }}</button>
+                    <button type="submit" class="btn btn-danger">{{ __('Delete') }}</button>
                   </div>
               </div>
               </div>

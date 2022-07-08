@@ -10,7 +10,7 @@ use PhpParser\Node\Stmt\Return_;
 use Illuminate\Support\Facades\Hash;
 
 
-class AdminControllerWithRepos extends Controller
+class   AdminControllerWithRepos extends Controller
 {
     public function ask(){
         return view('eproject.adminuser.login');
@@ -262,8 +262,8 @@ class AdminControllerWithRepos extends Controller
             return redirect()->action('AdminControllerWithRepos@collectionindex')
                 ->with('msg', 'Delete Successfully');
         }else{
-            return redirect()->action('AdminControllerWithRepos@collectionindex')
-                ->with('msg', 'Can not Delete collection has product ');
+            return redirect()->action('AdminControllerWithRepos@confirmcollection',($id))
+                ->with('msgs', 'Can not Delete collection has product!');
         }
 
 

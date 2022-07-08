@@ -48,7 +48,10 @@
 
                 </dl>
                 <div class="card-footer ml-auto mr-auto">
-
+                    <a type="button" class="btn btn-info"
+                       href="{{route('admin.stylistindex')}}">
+                        <i class="bi bi-backspace">back</i>
+                    </a>
                 </div>
               </div>
             </div>

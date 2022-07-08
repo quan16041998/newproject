@@ -48,9 +48,9 @@
                   <dt class="col-sm-3">Urlimg</dt>
                   <dd class="col-sm-9"><img src="{{asset("images/product/".$product->urlimg)}}" width="350" height="400"></dd>
                 </dl>
-                    <a type="button" class="btn btn-info btn-sm"
+                    <a type="button" class="btn btn-info"
                        href="{{route('admin.productindex')}}">
-                        <span class="material-icons">Back</span>
+                        <i class="bi bi-backspace">back</i>
                     </a>
               </div>
             </div>

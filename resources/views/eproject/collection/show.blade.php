@@ -37,7 +37,10 @@
 
                 </dl>
                 <div class="card-footer ml-auto mr-auto">
-
+                    <a type="button" class="btn btn-info"
+                       href="{{route('admin.collectionindex')}}">
+                        <i class="bi bi-backspace">back</i>
+                    </a>
                 </div>
               </div>
             </div>
