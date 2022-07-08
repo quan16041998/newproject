@@ -86,7 +86,7 @@
                   @endphp
 
                   <div class="row">
-                    <label class="col-sm-2 col-form-label">{{ __('Urlimg') }}</label>
+                    <label class="col-sm-2 col-form-label">{{ __('IMG') }}</label>
                     <div class="col-sm-7">
                       <div class="form-group">
                         <input type="hidden" class="form-control" name="urlimg" id="input-history"
@@ -101,6 +101,10 @@
                   </div>
                 <div class="card-footer ml-auto mr-auto">
                   <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                  <a type="button" class="btn btn-info"
+                     href="{{route('admin.stylistindex')}}">
+                    <i class="bi bi-backspace">back</i>
+                  </a>
                 </div>
               </div>
             </div>
