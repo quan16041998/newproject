@@ -43,10 +43,10 @@
                 </div>
 
                   <div class="row">
-                    <label class="col-sm-2 col-form-label">{{ __('urlimg') }}</label>
+                    <label class="col-sm-2 col-form-label">{{ __('IMG') }}</label>
                     <div class="col-sm-7">
                       <div class="form-group">
-                        <input class="form-control" name="urlimg" id="urlimg" type="hidden"
+                        <input type="hidden" class="form-control" name="urlimg" id="urlimg"
                                value="{{old('urlimg')?? $collection->urlimg}}"  /><br>
                         <img src="{{asset("images/collection/".$collection->urlimg)}}" width="350" height="400">
                       </div>
@@ -69,6 +69,10 @@
                 </div>
                 <div class="card-footer ml-auto mr-auto">
                   <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                  <a type="button" class="btn btn-info"
+                     href="{{route('admin.collectionindex')}}">
+                    <i class="bi bi-backspace">back</i>
+                  </a>
                 </div>
               </div>
             </div>
