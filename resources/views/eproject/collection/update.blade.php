@@ -46,6 +46,8 @@
                     <label class="col-sm-2 col-form-label">{{ __('urlimg') }}</label>
                     <div class="col-sm-7">
                       <div class="form-group">
+                        <input class="form-control" name="urlimg" id="urlimg" type="hidden"
+                               value="{{old('urlimg')?? $collection->urlimg}}"  /><br>
                         <img src="{{asset("images/collection/".$collection->urlimg)}}" width="350" height="400">
                       </div>
                     </div>
