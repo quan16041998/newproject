@@ -81,6 +81,10 @@
                   </div>
                 <div class="card-footer ml-auto mr-auto">
                   <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                  <a type="button" class="btn btn-info"
+                       href="{{route('admin.customerindex')}}">
+                        <i class="bi bi-backspace">back</i>
+                    </a>
                 </div>
               </div>
             </div>
