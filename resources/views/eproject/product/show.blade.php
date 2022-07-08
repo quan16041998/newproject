@@ -34,7 +34,7 @@
                   <dd class="col-sm-9">{{$product->fabric }}</dd>
 
                   <dt class="col-sm-3">price</dt>
-                  <dd class="col-sm-9">{{$product->price }}</dd>
+                  <dd class="col-sm-9">{{$product->price }} $</dd>
 
                   <dt class="col-sm-3">size</dt>
                   <dd class="col-sm-9">{{$product->size }}</dd>
