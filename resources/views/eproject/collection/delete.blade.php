@@ -40,6 +40,10 @@
                 </dl>
                   <div class="card-footer ml-auto mr-auto">
                     <button type="submit" class="btn btn-danger">{{ __('Delete') }}</button>
+                    <a type="button" class="btn btn-info"
+                       href="{{route('admin.collectionindex')}}">
+                      <i class="bi bi-backspace">back</i>
+                    </a>
                   </div>
               </div>
               </div>
