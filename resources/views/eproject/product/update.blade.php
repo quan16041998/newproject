@@ -82,6 +82,8 @@
                     <label class="col-sm-2 col-form-label">{{ __('Urlimg') }}</label>
                     <div class="col-sm-7">
                       <div class="form-group">
+                        <input type="hidden" class="form-control" name="urlimg" id="urlimg"
+                               value="{{old('urlimg')?? $product->urlimg}}" /><br>
                         <img src="{{asset($img.$product->urlimg)}}" width="350" height="400">
 
                       </div>
