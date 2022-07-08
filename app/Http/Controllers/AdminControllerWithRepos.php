@@ -91,7 +91,7 @@ class   AdminControllerWithRepos extends Controller
             return redirect()->action('AdminControllerWithRepos@adminindex');
         }
         $this->formadminValidate($request)->validate();
-        if($request->input('newpassword' != null)){
+        if($request->input('newpassword')!= null){
             $admin = (object)[
                 'username' => $request->input('username'),
                 'password' => Hash::make($request->input('newpassword'), [
