@@ -43,7 +43,7 @@
                   <dt class="col-sm-3">history</dt>
                   <dd class="col-sm-9">{{$stylist->history }}</dd>
 
-                  <dt class="col-sm-3">Urlimg</dt>
+                  <dt class="col-sm-3">IMG</dt>
                   <dd class="col-sm-9"><img src="{{asset("images/stylist/".$stylist->urlimg)}}" width="350" height="400"></dd>
 
                 </dl>
