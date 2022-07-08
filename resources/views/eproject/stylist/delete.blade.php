@@ -43,12 +43,16 @@
                   <dt class="col-sm-3">history</dt>
                   <dd class="col-sm-9">{{$stylist->history }}</dd>
 
-                  <dt class="col-sm-3">Urlimg</dt>
+                  <dt class="col-sm-3">IMG</dt>
                   <dd class="col-sm-9"><img src="{{asset("images/stylist/".$stylist->urlimg)}}" width="350" height="400"></dd>
 
                 </dl>
                   <div class="card-footer ml-auto mr-auto">
                     <button type="submit" class="btn btn-danger">{{ __('Delete') }}</button>
+                    <a type="button" class="btn btn-info"
+                     href="{{route('admin.stylistindex')}}">
+                    <i class="bi bi-backspace">back</i>
+                  </a>
                   </div>
               </div>
             </div>
