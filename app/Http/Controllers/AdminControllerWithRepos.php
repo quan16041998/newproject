@@ -212,7 +212,13 @@ class   AdminControllerWithRepos extends Controller
         return Validator::make(
             $request->all(),[
                 'name'=>['required'],
-                'introduce'=>['required'],
+                'image' => ['required'],
+                'introduce'=>['required']
+            ],
+            [
+                'name.required' => 'Collection name can not be empty',
+                'image.required' => 'Chose File for image can not be empty',
+                'introduce.required' => 'Introduce can not be empty',
             ]
         );
     }
@@ -265,10 +271,6 @@ class   AdminControllerWithRepos extends Controller
             return redirect()->action('AdminControllerWithRepos@confirmcollection',($id))
                 ->with('msgs', 'Can not Delete collection has product!');
         }
-
-
-
-
     }
 
 
