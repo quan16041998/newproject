@@ -45,7 +45,7 @@
                   <dt class="col-sm-3">Stylist</dt>
                   <dd class="col-sm-9">{{ $stylist->name }}</dd>
 
-                  <dt class="col-sm-3">Urlimg</dt>
+                  <dt class="col-sm-3">IMG</dt>
                   <dd class="col-sm-9"><img src="{{asset("images/product/".$product->urlimg)}}" width="350" height="400"></dd>
                 </dl>
                     <a type="button" class="btn btn-info"
