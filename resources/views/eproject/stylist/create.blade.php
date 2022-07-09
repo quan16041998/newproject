@@ -75,21 +75,17 @@
                     </div>
                   </div>
                 </div>
-                    <div class="row">
-                        <label class="col-sm-2 col-form-label">{{ __('Urlimg') }}</label>
-                        <div class="col-sm-7">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="urlimg" name="urlimg"
-                                       value="{{old('urlimg')?? $stylist->urlimg?? null}}">
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="row">
                         <label class="col-sm-2 col-form-label">{{ __('Chose File') }}</label>
                         <input type="file" name="image" class="col-sm-7">
                     </div>
                 <div class="card-footer ml-auto mr-auto">
                   <button type="submit" class="btn btn-primary">{{ __('Create') }}</button>
+                  <a type="button" class="btn btn-info"
+                     href="{{route('admin.stylistindex')}}">
+                    <i class="bi bi-backspace">back</i>
+                  </a>
                 </div>
               </div>
             </div>

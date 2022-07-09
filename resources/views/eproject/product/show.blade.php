@@ -34,7 +34,7 @@
                   <dd class="col-sm-9">{{$product->fabric }}</dd>
 
                   <dt class="col-sm-3">price</dt>
-                  <dd class="col-sm-9">{{$product->price }}</dd>
+                  <dd class="col-sm-9">{{$product->price }} $</dd>
 
                   <dt class="col-sm-3">size</dt>
                   <dd class="col-sm-9">{{$product->size }}</dd>
@@ -45,7 +45,7 @@
                   <dt class="col-sm-3">Stylist</dt>
                   <dd class="col-sm-9">{{ $stylist->name }}</dd>
 
-                  <dt class="col-sm-3">Urlimg</dt>
+                  <dt class="col-sm-3">IMG</dt>
                   <dd class="col-sm-9"><img src="{{asset("images/product/".$product->urlimg)}}" width="350" height="400"></dd>
                 </dl>
                     <a type="button" class="btn btn-info"

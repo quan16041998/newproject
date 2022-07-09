@@ -212,7 +212,13 @@ class   AdminControllerWithRepos extends Controller
         return Validator::make(
             $request->all(),[
                 'name'=>['required'],
-                'introduce'=>['required'],
+                'image' => ['required'],
+                'introduce'=>['required']
+            ],
+            [
+                'name.required' => 'Collection name can not be empty',
+                'image.required' => 'Chose File for image can not be empty',
+                'introduce.required' => 'Introduce can not be empty',
             ]
         );
     }
@@ -265,10 +271,6 @@ class   AdminControllerWithRepos extends Controller
             return redirect()->action('AdminControllerWithRepos@confirmcollection',($id))
                 ->with('msgs', 'Can not Delete collection has product!');
         }
-
-
-
-
     }
 
 
@@ -411,15 +413,16 @@ class   AdminControllerWithRepos extends Controller
                 'dob' => ['required'],
                 'contact' => ['required'],
                 'email' => ['required'],
-                'history' => ['required']
+                'history' => ['required'],
+                'image' => ['required']
             ],
             [
                 'name.required' => 'Stylist name can not be empty',
-                'dob.required' => 'dob can not be empty',
-                'contact.required' => 'contact can not be empty',
-                'email.required' => 'email can not be empty',
-                'history.required' => 'history can not be empty',
-                'urlimg.required' => 'urlimg can not be empty',
+                'dob.required' => 'DOB can not be empty',
+                'contact.required' => 'Contact can not be empty',
+                'email.required' => 'Email can not be empty',
+                'history.required' => 'History can not be empty',
+                'image.required' => 'Chose File for image can not be empty',
 
             ]
         );
@@ -592,18 +595,18 @@ class   AdminControllerWithRepos extends Controller
                 'fabric' => ['required'],
                 'price' => ['required'],
                 'size' => ['required'],
-
-                'CollectionID' => ['required'],
-                'SID' => ['required']
+                'image' => ['required'},
+                'CollectionID' => ['gt:0'],
+                'SID' => ['gt:0']
             ],
             [
                 'product_code.required' => 'Product code can not be empty',
                 'fabric.required' => 'Fabric can not be empty',
                 'price.required' => 'Price can not be empty',
                 'size.required' => 'Size can not be empty',
-                'urlimg.required' => 'Url for image can not be empty',
-                'CollectionID.required' => 'Conllection ID can not be empty',
-                'SID.required' => 'SID can not be empty',
+                'image.required' => 'Chose file for image can not be empty',
+                'CollectionID.gt' => 'Conllection ID can not be empty',
+                'SID.gt' => 'SID can not be empty',
             ]
         );
     }
