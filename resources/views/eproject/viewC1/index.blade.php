@@ -51,7 +51,7 @@
                     <div class="col-lg-6">
                         <p class="text-muted small text-uppercase mb-2" style="color: #dcb14a;">New Inspiration 2022</p>
                         <h1 class="h2 text-uppercase mb-3" style="color: #dcb14a;">20% off on new season</h1>
-                        <a class="btn btn-dark" href="{{route('viewC1.shop')}}">Browse collections</a>
+                        <a class="btn btn-dark" href="{{route('viewC1.shop', ['offset'=>0])}}">Browse collections</a>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
             </header>
             <div class="row">
                 @foreach($collection as $c)
-                <div class="col-md-3"><a class="category-item" href="{{route('viewC1.viewcollection', ['id' => $c->CollectionID])}}">
+                <div class="col-md-3"><a class="category-item" href="{{route('viewC1.viewcollection', ['id' => $c->CollectionID,'offset'=>0    ])}}">
                         <img   width="200px"  height="250px" src="{{asset("images/collection/".$c->urlimg)}}" alt=""/>
                         <strong class="category-item-title">{{$c->name}}</strong></a>
                 </div>
