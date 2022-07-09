@@ -1,4 +1,6 @@
-
+@php
+$offset = 1;
+@endphp
 <div class="page-holder">
     <!-- navbar-->
     <header class="header bg-white">
@@ -11,18 +13,18 @@
                             <!-- Link--><a class="nav-link active" href="{{route('viewC1.index')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <!-- Link--><a class="nav-link" href="{{route('viewC1.shop')}}">Shop</a>
+                            <!-- Link--><a class="nav-link" href="{{route('viewC1.shop',['offset'=>0])}}">Shop</a>
                         </li>
                         <li class="nav-item dropdown"><a type="button" class="nav-link dropdown-toggle" id="pagesDropdown"
                                                          href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Collection</a>
                             <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
-                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.shop')}}">View All Collection</a>
+                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.shop',['offset'=>0])}}">View All Collection</a>
                                         <a class="btn dropdown-toggle dropdown-item dropdown-menu-right"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Collection
                                         </a>
                                         <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
                                             @foreach($collection as $c)
-                                            <a class="dropdown-item" href="{{route('viewC1.viewcollection', ['id' => $c->CollectionID])}}">{{$c->name}}</a>
+                                            <a class="dropdown-item" href="{{route('viewC1.viewcollection', ['id' => $c->CollectionID,'offset'=>0])}}">{{$c->name}}</a>
                                             @endforeach
                                         </div>
 
@@ -33,7 +35,7 @@
                         <li class="nav-item dropdown"><a type="button" class="nav-link dropdown-toggle" id="pagesDropdown"
                                                          href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stylist</a>
                             <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
-                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.shop')}}">View All</a>
+                                <a class="dropdown-item border-0 transition-link" href="{{route('viewC1.shop',['offset'=>0])}}">View All</a>
                                 <a class="btn dropdown-toggle dropdown-item dropdown-menu-right"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                    Stylist
                                 </a>
@@ -57,7 +59,7 @@
                                 </p>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                <a href="{{route('viewC1.ask')}}" class="dropdown-item"> <i class="material-icons">person</i>{{\Illuminate\Support\Facades\Session::has('username')?
+                                <a href="" class="dropdown-item"> <i class="material-icons">person</i>{{\Illuminate\Support\Facades\Session::has('username')?
                            \Illuminate\Support\Facades\Session::get('username') : ''}}</a>
                                 <a class="dropdown-item" href="{{route('viewC1.signout')}}">{{ __('Log out') }}</a>
                                 <a class="dropdown-item" href="{{route('viewC1.signupcus')}}">{{ __('Sign Up') }}</a>

@@ -221,7 +221,7 @@ Route::group(['prefix' => 'viewC1'], function (){
         'as' => 'viewC1.index'
     ]);
 
-    Route::get('shop', [
+    Route::get('shop/{offset}', [
         'uses' => 'ViewC1ControllerWithRepos@shop',
         'as' => 'viewC1.shop'
     ]);
@@ -245,7 +245,7 @@ Route::group(['prefix' => 'viewC1'], function (){
         'as'  => 'viewC1.search'
     ]);
 
-    Route::get('viewcollection/{id}',[
+    Route::get('viewcollection/{id}/{offset}',[
         'uses' => 'ViewC1ControllerWithRepos@viewcollection',
         'as' => 'viewC1.viewcollection'
     ]);
@@ -253,7 +253,7 @@ Route::group(['prefix' => 'viewC1'], function (){
         'uses' => 'ViewC1ControllerWithRepos@stylist',
         'as' => 'viewC1.stylist'
     ]);
-    Route::get('viewstylist/{id}',[
+    Route::get('viewstylist/{id}/{offset}',[
         'uses' => 'ViewC1ControllerWithRepos@viewstylist',
         'as' => 'viewC1.viewstylist'
     ]);

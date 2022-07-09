@@ -51,11 +51,12 @@ class ViewC1ControllerWithRepos extends Controller
 
     }
 
-    public function shop(){
+    public function shop($offset){
         $collection = AdminRepos::getallcollection();
         $stylist = AdminRepos::getallstylist();
+        $product = AdminRepos::productpagination($offset);
         return view('eproject.viewC1.shop',[
-            'product' => DB::table('product')->paginate(12),
+            'product' => $product,
             'collection' => $collection,
             'stylist' => $stylist
         ]);
@@ -64,26 +65,28 @@ class ViewC1ControllerWithRepos extends Controller
     public function cart(){
         return view('eproject.viewC1.cart');
     }
-    public function viewcollection($id){
+    public function viewcollection($id,$offset){
         $collection = AdminRepos::getallcollection();
         $stylist = AdminRepos::getallstylist();
         $collectionname = AdminRepos::getcollectionbyid($id);
+        $product = AdminRepos::getproductbyCollectionIDPG($id,$offset);
         return view('eproject.viewC1.viewcollection',[
             'collection' => $collection,
             'stylist' => $stylist,
-            'product' => DB::table('product')->where('CollectionID','=',$id)->paginate(12),
+            'product' => $product,
             'sum'=> DB::table('product')->where('CollectionID','=',$id)->count(),
             'collectionname'=>$collectionname[0]
         ]);
     }
-    public function viewstylist($id){
+    public function viewstylist($id,$offset){
         $collection = AdminRepos::getallcollection();
         $stylist = AdminRepos::getallstylist();
         $stylistname = AdminRepos::getstylistbyid($id);
+        $product = AdminRepos::getproductbySIDPG($id,$offset);
         return view('eproject.viewC1.viewstylist',[
             'collection' => $collection,
             'stylist' => $stylist,
-            'product' => DB::table('product')->where('SID','=',$id)->paginate(12),
+            'product' => $product,
             'sum'=> DB::table('product')->where('SID','=',$id)->count(),
             'stylistname'=> $stylistname[0]
         ]);

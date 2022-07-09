@@ -38,6 +38,14 @@ class AdminRepos
         return DB::select($sql, ['%'.$request.'%']);
     }
 
+    public static function productpagination($offset){
+        $sql = "select * ";
+        $sql .= "from product ";
+        $sql .= "limit 12 offset ?";
+
+        return DB::select($sql,[$offset]);
+    }
+
 
 
 
@@ -99,6 +107,15 @@ class AdminRepos
 
         return DB::select($sql, [$id]);
     }
+    public static function  getproductbyCollectionIDPG($id,$offset){
+        $sql = "select * ";
+        $sql .= "from product ";
+        $sql .= "where CollectionID = ? ";
+        $sql .= "limit 12 offset ?";
+
+
+        return DB::select($sql, [$id,$offset]);
+    }
     public static function  getproductbySID($id){
         $sql = "select * ";
         $sql .= "from product ";
@@ -106,6 +123,15 @@ class AdminRepos
 
 
         return DB::select($sql, [$id]);
+    }
+    public static function  getproductbySIDPG($id,$offset){
+        $sql = "select * ";
+        $sql .= "from product ";
+        $sql .= "where SID = ? ";
+        $sql .= "limit 12 offset ?";
+
+
+        return DB::select($sql, [$id,$offset]);
     }
 
 
