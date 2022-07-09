@@ -565,14 +565,19 @@ class   AdminControllerWithRepos extends Controller
         $product = AdminRepos::getProductById($id);
         $collection = AdminRepos::getcollectionbyProductid($id);
         $stylist = AdminRepos::getstylistbyProductid($id);
+        if(!$product){
+            return  redirect()->action('AdminControllerWithRepos@productindex')
+                ->with('msgs', 'No information');
+        }else{
+            return view('eproject.product.delete',
+                [
+                    'product' => $product[0],
+                    'collection' => $collection[0],
+                    'stylist' => $stylist[0]
+                ]
+            );
+        }
 
-        return view('eproject.product.delete',
-            [
-                'product' => $product[0],
-                'collection' => $collection[0],
-                'stylist' => $stylist[0]
-            ]
-        );
     }
 
     public function deleteproduct(Request $request, $id){
@@ -595,7 +600,7 @@ class   AdminControllerWithRepos extends Controller
                 'fabric' => ['required'],
                 'price' => ['required'],
                 'size' => ['required'],
-                'image' => ['required'},
+                'image' => ['required'],
                 'CollectionID' => ['gt:0'],
                 'SID' => ['gt:0']
             ],

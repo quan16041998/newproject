@@ -35,11 +35,18 @@ class ViewC1ControllerWithRepos extends Controller
 
             return redirect()->action('ViewC1ControllerWithRepos@shop');
         }else{
-            return view('eproject.viewC1.search',
-                [   'product' => $product,
-                    'collection' => $collection,
-                    'stylist' => $stylist
+            if(!$product){
+                return view('eproject.viewC1.search2',[
+                    'stylist' => $stylist,
+                    'collection' => $collection
                 ]);
+            }else{
+                return view('eproject.viewC1.search',
+                    [   'product' => $product,
+                        'collection' => $collection,
+                        'stylist' => $stylist
+                    ]);
+            }
         }
 
     }
