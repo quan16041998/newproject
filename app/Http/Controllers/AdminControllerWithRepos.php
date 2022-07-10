@@ -212,12 +212,10 @@ class   AdminControllerWithRepos extends Controller
         return Validator::make(
             $request->all(),[
                 'name'=>['required'],
-                'image' => ['required'],
                 'introduce'=>['required']
             ],
             [
                 'name.required' => 'Collection name can not be empty',
-                'image.required' => 'Chose File for image can not be empty',
                 'introduce.required' => 'Introduce can not be empty',
             ]
         );
@@ -414,15 +412,13 @@ class   AdminControllerWithRepos extends Controller
                 'contact' => ['required'],
                 'email' => ['required'],
                 'history' => ['required'],
-                'image' => ['required']
             ],
             [
                 'name.required' => 'Stylist name can not be empty',
                 'dob.required' => 'DOB can not be empty',
                 'contact.required' => 'Contact can not be empty',
                 'email.required' => 'Email can not be empty',
-                'history.required' => 'History can not be empty',
-                'image.required' => 'Chose File for image can not be empty',
+                'history.required' => 'History can not be empty'
 
             ]
         );
@@ -600,7 +596,6 @@ class   AdminControllerWithRepos extends Controller
                 'fabric' => ['required'],
                 'price' => ['required'],
                 'size' => ['required'],
-                'image' => ['required'],
                 'CollectionID' => ['gt:0'],
                 'SID' => ['gt:0']
             ],
@@ -609,7 +604,6 @@ class   AdminControllerWithRepos extends Controller
                 'fabric.required' => 'Fabric can not be empty',
                 'price.required' => 'Price can not be empty',
                 'size.required' => 'Size can not be empty',
-                'image.required' => 'Chose file for image can not be empty',
                 'CollectionID.gt' => 'Conllection ID can not be empty',
                 'SID.gt' => 'SID can not be empty',
             ]
