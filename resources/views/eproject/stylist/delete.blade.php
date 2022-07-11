@@ -47,12 +47,13 @@
                   <dd class="col-sm-9"><img src="{{asset("images/stylist/".$stylist->urlimg)}}" width="350" height="400"></dd>
 
                 </dl>
-                  <div class="card-footer ml-auto mr-auto">
-                    <button type="submit" class="btn btn-danger">{{ __('Delete') }}</button>
-                    <a type="button" class="btn btn-info"
+                  <div class="col-md-4">
+                     <a type="button" class="btn btn-info"
                      href="{{route('admin.stylistindex')}}">
                     <i class="bi bi-backspace">back</i>
                   </a>
+                  <button type="submit" class="btn btn-danger">{{ __('Delete') }}</button>
+                  
                   </div>
               </div>
             </div>
