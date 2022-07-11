@@ -70,7 +70,7 @@
                   <label class="col-sm-2 col-form-label">{{ __('History') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="history" id="input-history" type="history" placeholder="{{ __('history') }}"
+                      <input class="form-control" name="history" id="input-history" type="history" placeholder="{{ __('History') }}"
                              value="{{old('history')?? $stylist->history}}"/>
                     </div>
                   </div>
