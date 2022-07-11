@@ -37,8 +37,8 @@
                   <label class="col-sm-2 col-form-label">{{ __('User Name') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="username" id="username" type="text"
-                             value="{{ old('username')?? $admin->username }}" />
+                      <input class="form-control"  id="username" type="text"
+                             value="{{ old('username')?? $admin->username }}" disabled />
                     </div>
                   </div>
                 </div>
