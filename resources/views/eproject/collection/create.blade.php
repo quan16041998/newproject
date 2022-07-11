@@ -56,12 +56,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-footer ml-auto mr-auto">
-                  <button type="submit" class="btn btn-primary">{{ __('Create') }}</button>
-                  <a type="button" class="btn btn-info"
+                <div class="col-md-4">
+                   <a type="button" class="btn btn-info"
                      href="{{route('admin.collectionindex')}}">
                     <i class="bi bi-backspace">back</i>
                   </a>
+                  <button type="submit" class="btn btn-primary">{{ __('Create') }}</button>
+                 
                 </div>
               </div>
 
