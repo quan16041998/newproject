@@ -18,7 +18,8 @@
                 <thead>
                 <tr>
                   <th><label for="username" class="font-weight-bold">Username</label>
-                  <th><input type="text" class="form-control" name="username" value="{{old('username')?? $admin->username}}"></th>
+                  <th><input type="text" class="form-control value="{{old('username')?? $admin->username}}" disabled></th>
+                    <input type="hidden" name="username" value="{{old('username')?? $admin->username}}">
                 </tr>
                 <tr>
                   <th><label for="newpassword" class="font-weight-bold">New Password</label></th>
