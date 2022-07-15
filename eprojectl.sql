@@ -65,7 +65,7 @@ VALUES  ('Winter 2022','00001-burberry-fall-2022-menswear-credit-brand.webp','Ch
         ('Shoes','giay11.png','Beautiful Shoes');
 
 INSERT INTO product( product_code, fabric, price, size, urlimg, CollectionID, SID)
-VALUES 
+VALUES
 ('MD_QA01', 'velvet', 1500,'S-M-L', '00001-burberry-fall-2022-menswear-credit-brand.webp', 1,1),
 ('MD_QA02', 'kaki', 2000,'S-M-L', '00002-burberry-fall-2022-menswear-credit-brand.webp', 1,1),
 ('MD_QA03', 'jean', 1500,'S-M-L', '00003-burberry-fall-2022-menswear-credit-brand.webp', 1,1),
@@ -112,7 +112,7 @@ VALUES
 
 
 INSERT INTO product(product_code, fabric, price, size, urlimg, CollectionID, SID)
-VALUES 
+VALUES
 ('MH_QA01', 'cotton', 2500,'S-M-L', '00001-DOLCE-GABBANA-MENSWEAR-SPRING-21.webp', 2,2),
 ('MH_QA02', 'cotton', 2500,'S-M-L', '00002-DOLCE-GABBANA-MENSWEAR-SPRING-21.webp', 2,2),
 ('MH_QA03', 'cotton', 2300,'S-M-L', '00003-DOLCE-GABBANA-MENSWEAR-SPRING-21.webp', 2,2),
@@ -156,7 +156,7 @@ VALUES
 
 
 INSERT INTO product(product_code, fabric, price, size, urlimg, CollectionID, SID)
-VALUES 
+VALUES
     ('PK_DH01', 'Rose gold. Sapphire crystal case back.', 15000,'S-M-L', '6002R_001_1.jpg', 3,3),
     ('PK_DH02', 'Rose gold. Sapphire crystal case back.', 15000,'S-M-L', '5304_301R_001_1.jpg', 3,3),
     ('PK_DH03', 'White gold, the Cyclops lens and the five-piece link Jubilee bracelet.', 20000,'S-M-L', 'Datejust 31 278289RBR.jpg', 3,3),
@@ -191,7 +191,7 @@ VALUES ('quan','1998-04-16','0898288386','quan16041998@gmail.com','Ha Noi');
 
 
 INSERT INTO product( product_code, fabric, price, size, urlimg, CollectionID, SID)
-VALUES 
+VALUES
 ('PK_GY01', 'leather', 1500, 'S-M-L', 'giay01.webp', 4,1),
 ('PK_GY02', 'leather', 2000, 'S-M-L', 'giay02.webp', 4,1),
 ('PK_GY03', 'leather', 1600, 'S-M-L', 'giay03.webp', 4,1),
@@ -202,13 +202,13 @@ VALUES
 ('PK_GY08', 'leather', 1500, 'S-M-L', 'giay08.webp', 4,1),
 ('PK_GY09', 'leather', 1200, 'S-M-L', 'giay09.webp', 4,1),
 ('PK_GY10', 'leather', 1300, 'S-M-L', 'giay10.webp', 4,1),
-('PK_GY11', 'leather', 1500, 'S-M-L' ,'giay11.webp', 4,1),
+('PK_GY11', 'leather', 1500, 'S-M-L' ,'giay11.png', 4,1),
 ('PK_GY12', 'leather', 1400, 'S-M-L', 'giay12.webp', 4,1),
 ('PK_GY13', 'leather', 1500, 'S-M-L', 'giay13.webp', 4,1),
-('PK_GY14', 'leather', 1400, 'S-M-L', 'giay14.webp', 4,1),
-('PK_GY15', 'leather', 1500, 'S-M-L', 'giay15.webp', 4,1),
-('PK_GY16', 'leather', 1800, 'S-M-L' ,'giay16.webp', 4,1),
+('PK_GY14', 'leather', 1400, 'S-M-L', 'giay14.png', 4,1),
+('PK_GY15', 'leather', 1500, 'S-M-L', 'giay15.png', 4,1),
+('PK_GY16', 'leather', 1800, 'S-M-L' ,'giay16.jpg', 4,1),
 ('PK_GY17', 'leather', 1800, 'S-M-L', 'giay17.webp', 4,1),
 ('PK_GY18', 'leather', 1700, 'S-M-L', 'giay18.webp', 4,1),
-('PK_GY19', 'leather', 1500, 'S-M-L', 'giay19.webp', 4,1),
-('PK_GY20', 'leather', 1900, 'S-M-L', 'giay20.webp', 4,1);
+('PK_GY19', 'leather', 1500, 'S-M-L', 'giay19.jpg', 4,1),
+('PK_GY20', 'leather', 1900, 'S-M-L', 'giay20.jpg', 4,1);
