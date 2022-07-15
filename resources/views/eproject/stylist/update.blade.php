@@ -99,12 +99,13 @@
                     <label class="col-sm-2 col-form-label">{{ __('Chose File') }}</label>
                     <input type="file" name="image" class="col-sm-7">
                   </div>
-                <div class="card-footer ml-auto mr-auto">
-                  <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                <div class="col-md-4">
                   <a type="button" class="btn btn-info"
                      href="{{route('admin.stylistindex')}}">
                     <i class="bi bi-backspace">back</i>
                   </a>
+                  <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                  
                 </div>
               </div>
             </div>

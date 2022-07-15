@@ -67,12 +67,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-footer ml-auto mr-auto">
-                  <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                <div class="col-md-4">
                   <a type="button" class="btn btn-info"
                      href="{{route('admin.collectionindex')}}">
-                    <i class="bi bi-backspace">back</i>
+                    <i class="bi bi-backspace">Back</i>
                   </a>
+                  <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                  
                 </div>
               </div>
             </div>

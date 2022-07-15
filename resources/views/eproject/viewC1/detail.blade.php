@@ -41,7 +41,7 @@
                     <h1>{{$product->product_code}}</h1>
                     <p class="text-muted lead">{{$price}}$</p>
                     <p class="text-sm mb-4">Size:<a class="btn-outline-warning btn-sm mx-1">{{$size[0]}}</a><a class="btn-outline-warning btn-sm mx-1">{{$size[1]}}</a><a class="btn-outline-warning btn-sm mx-1">{{$size[2]}}</a> </p>
-                    <p class="text-sm mb-4">Collection: <a href="{{route('viewC1.viewcollection', ['id' => $collection1->CollectionID])}}">{{$collection1->name}}</a></p>
+                    <p class="text-sm mb-4">Collection: <a href="{{route('viewC1.viewcollection', ['id' => $collection1->CollectionID, 'offset' =>0])}}">{{$collection1->name}}</a></p>
                     <p class="text-sm mb-4">Stylist: <a href="{{route('viewC1.stylist', ['id' => $stylist1->SID])}}">{{$stylist1->name}}</a></p>
                     <div class="row align-items-stretch mb-4">
                         <div class="col-sm-5 pr-sm-0">
